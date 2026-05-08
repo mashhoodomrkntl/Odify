@@ -18,7 +18,7 @@ export default function ContactPage() {
             className="max-w-4xl"
           >
             <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Contact Odify</span>
-            <h1 className="text-5xl md:text-8xl font-black text-white leading-tight uppercase mb-8 tracking-tighter">
+            <h1 className="text-5xl md:text-7xl font-black text-white leading-tight uppercase mb-8 tracking-tighter">
               Let&apos;s Build <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">Something Disciplined.</span>
             </h1>
@@ -31,11 +31,11 @@ export default function ContactPage() {
 
       {/* Main Contact Section */}
       <section className="section-padding">
-        <div className="container-custom px-6 md:px-12">
+        <div className="container-custom px-6 md:px-0">
           <div className="grid lg:grid-cols-2 gap-24">
             {/* Left: Contact Form */}
             <ScrollReveal>
-              <div className="bg-brand-dark/30 backdrop-blur-xl border border-white/5 p-8 md:p-16 relative group">
+              <div className="bg-brand-dark/30 backdrop-blur-xl border border-white/5 p-8 md:p-8 relative group">
                 <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-brand-red opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
                 <h2 className="text-3xl font-black text-white uppercase mb-12 tracking-tight">Schedule a Consultation</h2>
@@ -46,15 +46,15 @@ export default function ContactPage() {
                       <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">Your Name</label>
                       <input
                         type="text"
-                        className="w-full bg-brand-black/50 border-b border-white/10 px-0 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold placeholder:text-white/5"
+                        className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm tracking-widest font-bold placeholder:text-white/20"
                         placeholder="ENTER NAME"
                       />
                     </div>
                     <div className="space-y-4">
-                      <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">Email Address</label>
+                      <label className="text-[10px] font-black  tracking-widest text-brand-accent/30">Email Address</label>
                       <input
                         type="email"
-                        className="w-full bg-brand-black/50 border-b border-white/10 px-0 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold placeholder:text-white/5"
+                        className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold placeholder:text-white/20"
                         placeholder="EMAIL@DOMAIN.COM"
                       />
                     </div>
@@ -62,7 +62,7 @@ export default function ContactPage() {
 
                   <div className="space-y-4">
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">Subject of Inquiry</label>
-                    <select className="w-full bg-brand-black/50 border-b border-white/10 px-0 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold appearance-none">
+                    <select className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold appearance-none">
                       <option>ACCOUNTING & BOOKKEEPING</option>
                       <option>TAXATION ADVISORY</option>
                       <option>AUDIT</option>
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">Your Message</label>
                     <textarea
                       rows={4}
-                      className="w-full bg-brand-black/50 border-b border-white/10 px-0 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold resize-none placeholder:text-white/5"
+                      className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm  tracking-widest font-bold resize-none placeholder:text-white/20"
                       placeholder="DESCRIBE YOUR REQUIREMENTS..."
                     ></textarea>
                   </div>

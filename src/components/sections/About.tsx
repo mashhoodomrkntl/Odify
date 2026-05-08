@@ -5,8 +5,10 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function About() {
   return (
     <section id="about" className="section-padding bg-brand-black relative">
-      {/* Decorative background element */}
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-dark/50 -skew-x-12 translate-x-1/2 pointer-events-none" />
+      {/* Decorative background element contained to prevent overflow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-brand-dark/50 -skew-x-12 translate-x-1/2" />
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

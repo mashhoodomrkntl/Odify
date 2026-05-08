@@ -34,8 +34,10 @@ const values = [
 export default function WhyOdify() {
   return (
     <section className="section-padding bg-brand-black text-white relative">
-      {/* Side background glow */}
-      <div className="absolute top-0 right-0 w-[500px] h-full bg-brand-red/[0.02] blur-[100px] pointer-events-none" />
+      {/* Side background glow contained to prevent overflow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-[500px] h-full bg-brand-red/[0.02] blur-[100px]" />
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-20">

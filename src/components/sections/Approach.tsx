@@ -27,10 +27,12 @@ export default function Approach() {
 
   return (
     <section id="approach" className="bg-brand-black relative" ref={containerRef}>
-      {/* Background glow */}
-      <div className="absolute bottom-0 left-0 w-full h-[500px] bg-brand-red/[0.03] blur-[120px] pointer-events-none" />
+      {/* Background glow contained to prevent overflow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-0 w-full h-[500px] bg-brand-red/[0.03] blur-[120px]" />
+      </div>
 
-      <div className="container-custom relative z-10">
+      <div className="container-custom relative z-10 px-6 md:px-12">
         {/* Sticky Header Wrapper */}
         <div className="sticky top-0 z-30 pt-24 pb-12 bg-brand-black/80 backdrop-blur-md">
           <ScrollReveal>
@@ -59,8 +61,8 @@ export default function Approach() {
               <div key={step.num} className="relative">
                 <ScrollReveal delay={i * 0.1}>
                   <div className={`md:flex items-center gap-12 md:mb-32 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
-                    <div className={`flex-1 ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                      <div className={`group relative bg-brand-dark/40 backdrop-blur-sm border border-white/5 p-10 transition-all duration-500 hover:border-brand-red/30 ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"} max-w-md`}>
+                    <div className={`flex-1 text-center ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
+                      <div className={`group relative bg-brand-dark/40 backdrop-blur-sm border border-white/5 p-8 md:p-10 transition-all duration-500 hover:border-brand-red/30 mx-auto md:mx-0 ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"} max-w-md text-left`}>
                         <span className="text-brand-red font-black text-[10px] tracking-[0.3em] uppercase">Phase {step.num}</span>
                         <h3 className="text-2xl font-bold text-white mt-4 mb-4 uppercase tracking-widest group-hover:text-brand-red transition-colors">{step.title}</h3>
                         <p className="text-brand-accent/40 leading-relaxed text-sm font-medium">{step.desc}</p>

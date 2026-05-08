@@ -41,10 +41,20 @@
   * {
     border-color: var(--border);
   }
+
+  html,
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-brand-red selection:text-white overflow-x-hidden;
+    @apply antialiased selection:bg-brand-red selection:text-white;
+    max-width: 100vw;
+    overflow-x: clip;
+    position: relative;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
     min-height: 100vh;
   }
+
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;
   }

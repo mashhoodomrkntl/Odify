@@ -6,8 +6,10 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 export default function Contact() {
   return (
     <section id="contact" className="section-padding bg-brand-black relative">
-      {/* Background patterns */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-red/[0.01] skew-x-12 translate-x-1/4 pointer-events-none" />
+      {/* Background patterns contained to prevent overflow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-brand-red/[0.01] skew-x-12 translate-x-1/4" />
+      </div>
 
       <div className="container-custom relative z-10">
         <div className="grid lg:grid-cols-2 gap-20 items-start">
