@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Send, Linkedin, Instagram, ArrowRight } from "lucide-react";
+import { Send } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export default function ContactPage() {
