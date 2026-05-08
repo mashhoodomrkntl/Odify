@@ -1,21 +1,15 @@
 import type { Metadata } from "next";
-import { Raleway, Righteous, PT_Sans_Caption } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const righteous = Righteous({
-  weight: "400",
-  variable: "--font-righteous",
-  subsets: ["latin"],
-});
-
-const ptSansCaption = PT_Sans_Caption({
-  weight: ["400", "700"],
-  variable: "--font-pt-sans-caption",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -31,15 +25,20 @@ export const metadata: Metadata = {
   },
 };
 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${raleway.variable} ${righteous.variable} ${ptSansCaption.variable} scroll-smooth`}>
-      <body className="antialiased">
+    <html lang="en" className={`${montserrat.variable} ${inter.variable} scroll-smooth`}>
+      <body className="antialiased bg-brand-black">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

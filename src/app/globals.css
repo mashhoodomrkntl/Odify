@@ -1,20 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-red: #EB0000;
-  --color-brand-black: #222222;
-  --color-brand-dark: #111111;
+  --color-brand-red: #D90429;
+  --color-brand-black: #0B0C10;
+  --color-brand-dark: #1F2833;
+  --color-brand-accent: #C5C6C7;
   
   --color-surface-50: #fcfcfc;
   --color-surface-100: #f5f5f5;
   --color-surface-200: #eeeeee;
-  --color-surface-900: #222222;
-  --color-surface-950: #111111;
+  --color-surface-800: #1F2833;
+  --color-surface-900: #0B0C10;
+  --color-surface-950: #050505;
 
-  --font-display: "Raleway", sans-serif;
-  --font-body: "Raleway", sans-serif;
-  --font-logo: "Righteous", cursive;
-  --font-tagline: "PT Sans Caption", sans-serif;
+  --font-display: var(--font-montserrat), sans-serif;
+  --font-body: var(--font-inter), sans-serif;
+  --font-logo: var(--font-montserrat), sans-serif;
 
   --radius-xl: 0.5rem;
   --radius-2xl: 1rem;
@@ -27,27 +28,21 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #222222;
-  --primary: #EB0000;
+  --background: #0B0C10;
+  --foreground: #C5C6C7;
+  --primary: #D90429;
   --primary-foreground: #ffffff;
-  --border: #eeeeee;
+  --border: #1F2833;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #111111;
-    --foreground: #fcfcfc;
-    --border: #222222;
-  }
-}
+/* The site is dark by default */
 
 @layer base {
   * {
     border-color: var(--border);
   }
   body {
-    @apply bg-background text-foreground font-body antialiased selection:bg-brand-red selection:text-white;
+    @apply bg-background text-foreground font-body antialiased selection:bg-brand-red selection:text-white overflow-x-hidden;
     min-height: 100vh;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -65,19 +60,19 @@
 }
 
 .btn-primary {
-  @apply px-8 py-4 rounded-sm bg-brand-red text-white font-bold transition-all hover:bg-brand-dark hover:shadow-xl active:scale-95 disabled:opacity-50 uppercase tracking-wider text-sm;
+  @apply px-8 py-4 rounded-none bg-brand-red text-white font-bold transition-all hover:bg-white hover:text-brand-red hover:shadow-[0_0_20px_rgba(217,4,41,0.4)] active:scale-95 disabled:opacity-50 uppercase tracking-widest text-xs;
 }
 
 .btn-secondary {
-  @apply px-8 py-4 rounded-sm border-2 border-brand-black text-brand-black font-bold transition-all hover:bg-brand-black hover:text-white active:scale-95 uppercase tracking-wider text-sm dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-brand-black;
+  @apply px-8 py-4 rounded-none border border-brand-accent text-brand-accent font-bold transition-all hover:bg-brand-accent hover:text-brand-black active:scale-95 uppercase tracking-widest text-xs;
 }
 
 .section-padding {
-  @apply py-24 md:py-32 px-6 md:px-12;
+  @apply py-24 md:py-32 px-4 md:px-12;
 }
 
 .container-custom {
-  @apply mx-auto max-w-7xl;
+  @apply mx-auto max-w-[1400px];
 }
 
 /* Custom Scrollbar */

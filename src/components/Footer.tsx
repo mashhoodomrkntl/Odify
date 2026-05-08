@@ -20,12 +20,34 @@ function LinkedinIcon({ size = 18, className = "" }: { size?: number; className?
   );
 }
 
+function InstagramIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
 const quickLinks = [
   { name: "About", href: "/about" },
-  { name: "Services", href: "#services" },
-  { name: "Approach", href: "#approach" },
-  { name: "Industries", href: "#industries" },
-  { name: "Contact", href: "#contact" },
+  { name: "Services", href: "/services" },
+  { name: "Approach", href: "/#approach" },
+  { name: "Industries", href: "/#industries" },
+  { name: "Contact", href: "/contact" },
 ];
 
 const serviceLinks = [
@@ -38,10 +60,13 @@ const serviceLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-black text-white" role="contentinfo">
+    <footer className="bg-brand-black text-white relative border-t border-white/5" role="contentinfo">
+      {/* Decorative background pulse */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent" />
+
       {/* Main Footer */}
-      <div className="container-custom px-6 md:px-12 pt-20 pb-12">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-custom px-6 md:px-12 pt-24 pb-16">
+        <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
@@ -49,28 +74,29 @@ export default function Footer() {
               alt="Odify"
               width={140}
               height={56}
-              className="h-12 w-auto object-contain mb-4"
+              className="h-26 w-auto object-contain mb-8"
             />
-            <p className="text-sm text-gray-400 font-tagline mt-2 tracking-wide">
+            <p className="text-[10px] text-brand-red font-black uppercase tracking-[0.4em] mb-4">
               Your Edge to Lead.
             </p>
-            <p className="text-sm text-gray-500 mt-4 leading-relaxed max-w-xs">
-              A corporate advisory firm built on standards, driven by performance, and trusted by design.
+            <p className="text-sm text-brand-accent/40 font-medium leading-relaxed max-w-xs">
+              A corporate advisory firm built on standards, driven by performance, and trusted by design. Selective by choice. Professional by standard.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-6">
-              Quick Links
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
+              Navigation
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-brand-red transition-colors"
+                    className="text-sm text-brand-accent/40 hover:text-brand-red transition-all font-medium flex items-center group"
                   >
+                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 transition-all duration-300" />
                     {link.name}
                   </Link>
                 </li>
@@ -80,16 +106,17 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-6">
-              Services
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
+              Expertise
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-4">
               {serviceLinks.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-brand-red transition-colors"
+                    className="text-sm text-brand-accent/40 hover:text-brand-red transition-all font-medium flex items-center group"
                   >
+                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 transition-all duration-300" />
                     {link.name}
                   </Link>
                 </li>
@@ -99,42 +126,58 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-6">
+            <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
               Connect
             </h4>
-            <ul className="space-y-4">
+            <ul className="space-y-6">
               <li>
                 <a
                   href="mailto:hello@odify.com"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-brand-red transition-colors group"
+                  className="flex items-center gap-4 text-sm text-brand-accent/40 hover:text-brand-red transition-colors group font-medium"
                 >
-                  <Mail size={16} className="text-brand-red/60 group-hover:text-brand-red" />
+                  <Mail size={18} className="text-brand-red/60 group-hover:text-brand-red" />
                   hello@odify.com
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+919995686838"
-                  className="flex items-center gap-3 text-sm text-gray-400 hover:text-brand-red transition-colors group"
+                  href="tel:+91 90480 10605"
+                  className="flex items-center gap-4 text-sm text-brand-accent/40 hover:text-brand-red transition-colors group font-medium"
                 >
-                  <Phone size={16} className="text-brand-red/60 group-hover:text-brand-red" />
-                  +91 9995 68 68 38
+                  <Phone size={18} className="text-brand-red/60 group-hover:text-brand-red" />
+                  +91 90480 10605
                 </a>
               </li>
-              <li>
-                <div className="flex items-start gap-3 text-sm text-gray-400">
-                  <MapPin size={16} className="text-brand-red/60 mt-0.5 shrink-0" />
-                  <span>Odify Corporate Office</span>
+              <li className="flex items-center gap-4">
+                {/* <div className="flex items-start gap-4 text-sm text-brand-accent/40 font-medium leading-relaxed">
+                  <MapPin size={18} className="text-brand-red/60 mt-0.5 shrink-0" />
+                  <span>Odify Corporate Office, <br />UAE, India</span>
+                </div> */}
+                <MapPin size={18} className="text-brand-red/60 mt-0.5 shrink-0" />
+                <div className="flex items-center gap-4 text-sm text-brand-accent/40 font-medium leading-relaxed bg-primary/18 p-3 rounded-xl text-white">
+                  🇦🇪 UAE  |  🇮🇳 India
                 </div>
               </li>
-              <li className="pt-2">
+              <li className="pt-4 border-t border-white/5 space-y-4">
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-brand-red transition-colors"
+                  href="https://www.linkedin.com/company/odifyconsultants/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-brand-red transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <LinkedinIcon size={18} />
-                  <span>LinkedIn</span>
+                  <LinkedinIcon size={20} className="text-brand-red" />
+                  <span>LinkedIn Presence</span>
+                </a>
+                <a
+                  href="https://www.instagram.com/odify_india?utm_source=qr&igsh=MXNzdnA4YWtuYXIzNA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.2em] text-white/50 hover:text-brand-red transition-colors"
+                  aria-label="Instagram"
+                >
+                  <InstagramIcon size={20} className="text-brand-red" />
+                  <span>Instagram</span>
                 </a>
               </li>
             </ul>
@@ -143,17 +186,17 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/10">
-        <div className="container-custom px-6 md:px-12 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-gray-500">
-            © {new Date().getFullYear()} Odify. All rights reserved.
+      <div className="bg-brand-dark/50 border-t border-white/5">
+        <div className="container-custom px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+          <p className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em]">
+            © {new Date().getFullYear()} Odify. All rights reserved. Precision by standard.
           </p>
-          <div className="flex items-center gap-6">
-            <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
-              Privacy Policy
+          <div className="flex items-center gap-8">
+            <Link href="/privacy" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
+              Privacy Protocol
             </Link>
-            <Link href="/terms" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
-              Terms of Use
+            <Link href="/terms" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
+              Terms of Engagement
             </Link>
           </div>
         </div>

@@ -10,13 +10,10 @@ import Expertise from "@/components/sections/Expertise";
 import ClientCommitment from "@/components/sections/ClientCommitment";
 import Stats from "@/components/sections/Stats";
 import Contact from "@/components/sections/Contact";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="relative isolate min-h-screen">
-      <Navbar />
       <Hero />
       <About />
       <Services />
@@ -27,7 +24,6 @@ export default function Home() {
       <ClientCommitment />
       <Stats />
       <Contact />
-      <Footer />
     </main>
   );
 }

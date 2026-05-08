@@ -6,66 +6,99 @@ import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-black">
-      {/* Background */}
+    <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 md:pt-28 pb-20 overflow-hidden bg-brand-black">
+      {/* Background with Ambient Red Glow */}
       <div className="absolute inset-0 bg-gradient-to-br from-brand-black via-brand-dark to-brand-black" />
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80')] bg-cover bg-center opacity-15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/60 to-transparent" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* Red accent line */}
-      <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-transparent via-brand-red to-transparent" />
+      {/* Texture/Grid Overlay */}
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80')] bg-cover bg-center opacity-[0.03] grayscale" />
 
-      <div className="relative z-10 container-custom px-6 md:px-12 text-center">
+      {/* Animated Red Line */}
+      <motion.div
+        initial={{ width: 0, opacity: 0 }}
+        animate={{ width: "100%", opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.5 }}
+        className="absolute bottom-0 left-0 h-[1px] bg-gradient-to-r from-transparent via-brand-red to-transparent z-20"
+      />
+
+      <div className="relative z-10 container-custom px-4 md:px-12 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
         >
-          <p className="text-brand-red font-semibold text-sm tracking-[0.3em] uppercase mb-6 font-tagline">
-            Compliance · Clarity · Control
-          </p>
+          <span className="inline-block text-brand-red font-bold text-[9px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase mb-8 border-b border-brand-red/30 pb-2">
+            Odify Corporate Advisory
+          </span>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight"
+          transition={{ duration: 1, delay: 0.2 }}
+          className="text-3xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-8"
         >
-          Not Just Numbers.
-          <br />
-          <span className="text-gradient">We Build Confidence.</span>
+          NOT JUST NUMBERS. <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50 uppercase">WE BUILD CONFIDENCE.</span>
         </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="mt-8 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed font-tagline"
+          transition={{ duration: 1, delay: 0.4 }}
+          className="inline-flex flex-wrap items-center justify-center gap-3 md:gap-6 px-4 md:px-8 py-3 border border-white/5 bg-white/[0.02] backdrop-blur-sm mb-10 mx-auto"
         >
-          Your Edge to Lead.
+          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Compliance</span>
+          <div className="hidden md:block w-[1px] h-4 bg-white/10" />
+          <span className="text-white font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Clarity</span>
+          <div className="hidden md:block w-[1px] h-4 bg-white/10" />
+          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Control</span>
+        </motion.div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="text-base md:text-xl text-brand-accent/60 max-w-2xl mx-auto leading-relaxed mb-12 md:mb-17 font-medium"
+        >
+          <span className="text-white">Your Edge to Lead.</span>
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.45 }}
-          className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4"
+          transition={{ duration: 1, delay: 0.6 }}
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5"
         >
-          <Link href="#services" className="btn-primary flex items-center gap-2 text-base">
-            Explore Our Services <ArrowRight size={18} />
+          <Link href="#services" className="btn-primary group !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm">
+            <span className="flex items-center gap-3">
+              Explore Our Services <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </span>
           </Link>
           <Link
             href="#contact"
-            className="px-8 py-4 rounded-sm border-2 border-white/20 text-white font-bold uppercase tracking-wider text-sm transition-all hover:border-brand-red hover:text-brand-red"
+            className="btn-secondary !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm"
           >
             Get in Touch
           </Link>
         </motion.div>
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
+      {/* Scroll Indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 hidden sm:flex"
+      >
+        {/* <span className="text-[9px] font-black uppercase tracking-[0.4em] text-white/20">Scroll</span> */}
+        <div className="w-[1px] h-8 md:h-12 bg-linear-to-b from-brand-red to-transparent" />
+      </motion.div>
+
+      {/* Decorative vertical lines */}
+      <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-white/5 hidden lg:block" />
+      <div className="absolute right-10 top-0 bottom-0 w-[1px] bg-white/5 hidden lg:block" />
     </section>
   );
 }
