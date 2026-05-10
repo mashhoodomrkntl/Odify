@@ -104,7 +104,7 @@ export default function ServicesPage() {
 
       {/* Standards Banner */}
       <section className="py-32 bg-brand-dark/50 border-y border-white/5 relative overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1454165833762-02ac4f40c1ce?w=1920&q=80')] bg-cover bg-fixed bg-center opacity-[0.03] grayscale" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-fixed bg-center opacity-[0.03] grayscale" />
         <div className="container-custom px-6 md:px-12 relative z-10 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase mb-10 leading-tight">

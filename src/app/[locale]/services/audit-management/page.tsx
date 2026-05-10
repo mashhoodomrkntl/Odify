@@ -119,7 +119,7 @@ export default function AuditPage() {
                 <div className="relative aspect-[4/5] bg-brand-dark overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 group">
                   <div className="absolute inset-0 border border-white/10 z-20 group-hover:border-brand-red/30 transition-colors" />
                   <Image
-                    src="https://images.unsplash.com/photo-1551288049-bbbda546697a?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=800"
                     alt="Audit Support"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-100"
