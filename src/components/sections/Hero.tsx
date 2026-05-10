@@ -1,10 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-32 md:pt-28 pb-20 overflow-hidden bg-brand-black">
       {/* Background with Ambient Red Glow */}
@@ -29,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
           <span className="inline-block text-brand-red font-bold text-[9px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase mb-8 border-b border-brand-red/30 pb-2">
-            Odify Corporate Advisory
+            {t("subtitle")}
           </span>
         </motion.div>
 
@@ -39,8 +42,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-3xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tighter mb-8"
         >
-          NOT JUST NUMBERS. <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50 uppercase">WE BUILD CONFIDENCE.</span>
+          {t("title1")} <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50 uppercase">{t("title2")}</span>
         </motion.h1>
 
         <motion.div
@@ -49,11 +52,11 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.4 }}
           className="inline-flex flex-wrap items-center justify-center gap-3 md:gap-6 px-4 md:px-8 py-3 border border-white/5 bg-white/[0.02] backdrop-blur-sm mb-10 mx-auto"
         >
-          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Compliance</span>
+          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">{t("feature1")}</span>
           <div className="hidden md:block w-[1px] h-4 bg-white/10" />
-          <span className="text-white font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Clarity</span>
+          <span className="text-white font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">{t("feature2")}</span>
           <div className="hidden md:block w-[1px] h-4 bg-white/10" />
-          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">Control</span>
+          <span className="text-brand-red font-bold text-[9px] md:text-[11px] tracking-[0.2em] md:tracking-[0.3em] uppercase whitespace-nowrap">{t("feature3")}</span>
         </motion.div>
 
         <motion.p
@@ -62,7 +65,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-base md:text-xl text-brand-accent/60 max-w-2xl mx-auto leading-relaxed mb-12 md:mb-17 font-medium"
         >
-          <span className="text-white">Your Edge to Lead.</span>
+          <span className="text-white">{t("tagline")}</span>
         </motion.p>
 
         <motion.div
@@ -71,16 +74,16 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5"
         >
-          <Link href="#services" className="btn-primary group !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm">
+          <Link href="/#services" className="btn-primary group !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm">
             <span className="flex items-center gap-3">
-              Explore Our Services <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              {t("explore")} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </span>
           </Link>
           <Link
-            href="#contact"
+            href="/contact"
             className="btn-secondary !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm"
           >
-            Get in Touch
+            {t("contact")}
           </Link>
         </motion.div>
       </div>

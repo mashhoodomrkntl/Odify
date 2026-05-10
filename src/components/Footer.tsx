@@ -1,5 +1,6 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 function LinkedinIcon({ size = 18, className = "" }: { size?: number; className?: string }) {
@@ -43,22 +44,24 @@ function InstagramIcon({ size = 18, className = "" }: { size?: number; className
 }
 
 const quickLinks = [
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services" },
-  { name: "Approach", href: "/#approach" },
-  { name: "Industries", href: "/#industries" },
-  { name: "Contact", href: "/contact" },
+  { key: "nav_about", href: "/about" },
+  { key: "nav_services", href: "/services" },
+  { key: "nav_approach", href: "/#approach" },
+  { key: "nav_industries", href: "/#industries" },
+  { key: "nav_contact", href: "/contact" },
 ];
 
 const serviceLinks = [
-  { name: "Accounting", href: "/services/accounting-bookkeeping" },
-  { name: "Taxation", href: "/services/taxation-advisory" },
-  { name: "Audit", href: "/services/audit-management" },
-  { name: "Compliance", href: "/services/compliance-advisory" },
-  { name: "Advisory", href: "/services/financial-statements" },
+  { key: "exp_accounting", href: "/services/accounting-bookkeeping" },
+  { key: "exp_taxation", href: "/services/taxation-advisory" },
+  { key: "exp_audit", href: "/services/audit-management" },
+  { key: "exp_compliance", href: "/services/compliance-advisory" },
+  { key: "exp_advisory", href: "/services/financial-statements" },
 ];
 
 export default function Footer() {
+  const t = useTranslations("Footer");
+  
   return (
     <footer className="bg-brand-black text-white relative border-t border-white/5" role="contentinfo">
       {/* Decorative background pulse */}
@@ -77,27 +80,27 @@ export default function Footer() {
               className="h-26 w-auto object-contain mb-8"
             />
             <p className="text-[10px] text-brand-red font-black uppercase tracking-[0.4em] mb-4">
-              Your Edge to Lead.
+              {t('tagline')}
             </p>
             <p className="text-sm text-brand-accent/40 font-medium leading-relaxed max-w-xs">
-              A corporate advisory firm built on standards, driven by performance, and trusted by design. Selective by choice. Professional by standard.
+              {t('desc')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
-              Navigation
+              {t('nav_title')}
             </h4>
             <ul className="space-y-4">
               {quickLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="text-sm text-brand-accent/40 hover:text-brand-red transition-all font-medium flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 transition-all duration-300" />
-                    {link.name}
+                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 rtl:ml-0 rtl:group-hover:ml-2 rtl:mr-0 transition-all duration-300" />
+                    {t(link.key)}
                   </Link>
                 </li>
               ))}
@@ -107,17 +110,17 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
-              Expertise
+              {t('exp_title')}
             </h4>
             <ul className="space-y-4">
               {serviceLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.key}>
                   <Link
                     href={link.href}
                     className="text-sm text-brand-accent/40 hover:text-brand-red transition-all font-medium flex items-center group"
                   >
-                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 transition-all duration-300" />
-                    {link.name}
+                    <span className="w-0 group-hover:w-4 h-[1px] bg-brand-red mr-0 group-hover:mr-2 rtl:ml-0 rtl:group-hover:ml-2 rtl:mr-0 transition-all duration-300" />
+                    {t(link.key)}
                   </Link>
                 </li>
               ))}
@@ -127,7 +130,7 @@ export default function Footer() {
           {/* Connect */}
           <div>
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-white mb-8 border-b border-brand-red/20 pb-2 inline-block">
-              Connect
+              {t('connect_title')}
             </h4>
             <ul className="space-y-6">
               <li>
@@ -145,7 +148,7 @@ export default function Footer() {
                   className="flex items-center gap-4 text-sm text-brand-accent/40 hover:text-brand-red transition-colors group font-medium"
                 >
                   <Phone size={18} className="text-brand-red/60 group-hover:text-brand-red" />
-                  +91 90480 10605
+                  <span dir="ltr">+91 90480 10605</span>
                 </a>
               </li>
               <li className="flex items-center gap-4">
@@ -167,7 +170,7 @@ export default function Footer() {
                   aria-label="LinkedIn"
                 >
                   <LinkedinIcon size={20} className="text-brand-red" />
-                  <span>LinkedIn Presence</span>
+                  <span>{t('linkedin')}</span>
                 </a>
                 <a
                   href="https://www.instagram.com/odify_india?utm_source=qr&igsh=MXNzdnA4YWtuYXIzNA=="
@@ -177,7 +180,7 @@ export default function Footer() {
                   aria-label="Instagram"
                 >
                   <InstagramIcon size={20} className="text-brand-red" />
-                  <span>Instagram</span>
+                  <span>{t('instagram')}</span>
                 </a>
               </li>
             </ul>
@@ -189,14 +192,14 @@ export default function Footer() {
       <div className="bg-brand-dark/50 border-t border-white/5">
         <div className="container-custom px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em]">
-            © {new Date().getFullYear()} Odify. All rights reserved. Precision by standard.
+            {t('copyright', { year: new Date().getFullYear() })}
           </p>
           <div className="flex items-center gap-8">
             <Link href="/privacy" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
-              Privacy Protocol
+              {t('privacy')}
             </Link>
             <Link href="/terms" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
-              Terms of Engagement
+              {t('terms')}
             </Link>
           </div>
         </div>

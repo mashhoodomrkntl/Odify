@@ -3,16 +3,18 @@
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useRef } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useTranslations } from "next-intl";
 
 const steps = [
-  { num: "01", title: "Understand", desc: "We begin by understanding your business, your obligations, and your expectations. No assumptions." },
-  { num: "02", title: "Structure", desc: "We build a tailored engagement plan covering scope, timelines, deliverables, and review checkpoints." },
-  { num: "03", title: "Execute", desc: "Our team delivers with discipline — every file documented, every step reviewed, every standard upheld." },
-  { num: "04", title: "Report", desc: "You receive clear, audit-ready outputs and ongoing communication. No surprises. No delays." },
-  { num: "05", title: "Improve", desc: "We don't just deliver — we identify opportunities to strengthen your financial operations going forward." },
+  { num: "01", titleKey: "step1_title", descKey: "step1_desc" },
+  { num: "02", titleKey: "step2_title", descKey: "step2_desc" },
+  { num: "03", titleKey: "step3_title", descKey: "step3_desc" },
+  { num: "04", titleKey: "step4_title", descKey: "step4_desc" },
+  { num: "05", titleKey: "step5_title", descKey: "step5_desc" },
 ];
 
 export default function Approach() {
+  const t = useTranslations("Approach");
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -37,10 +39,10 @@ export default function Approach() {
         <div className="sticky top-0 z-30 pt-24 pb-12 bg-brand-black/80 backdrop-blur-md">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
-              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">The Odify Methodology</span>
+              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("subtitle")}</span>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-[1.1] tracking-tight uppercase">
-                Trust the Process. <br />
-                Trust Odify.
+                {t("title1")} <br />
+                {t("title2")}
               </h2>
             </div>
           </ScrollReveal>
@@ -62,10 +64,10 @@ export default function Approach() {
                 <ScrollReveal delay={i * 0.1}>
                   <div className={`md:flex items-center gap-12 md:mb-32 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
                     <div className={`flex-1 text-center ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
-                      <div className={`group relative bg-brand-dark/40 backdrop-blur-sm border border-white/5 p-8 md:p-10 transition-all duration-500 hover:border-brand-red/30 mx-auto md:mx-0 ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"} max-w-md text-left`}>
-                        <span className="text-brand-red font-black text-[10px] tracking-[0.3em] uppercase">Phase {step.num}</span>
-                        <h3 className="text-2xl font-bold text-white mt-4 mb-4 uppercase tracking-widest group-hover:text-brand-red transition-colors">{step.title}</h3>
-                        <p className="text-brand-accent/40 leading-relaxed text-sm font-medium">{step.desc}</p>
+                      <div className={`group relative bg-brand-dark/40 backdrop-blur-sm border border-white/5 p-8 md:p-10 transition-all duration-500 hover:border-brand-red/30 mx-auto md:mx-0 ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"} max-w-md text-left rtl:text-right`}>
+                        <span className="text-brand-red font-black text-[10px] tracking-[0.3em] uppercase">{t("phase")} {step.num}</span>
+                        <h3 className="text-2xl font-bold text-white mt-4 mb-4 uppercase tracking-widest group-hover:text-brand-red transition-colors">{t(step.titleKey)}</h3>
+                        <p className="text-brand-accent/40 leading-relaxed text-sm font-medium">{t(step.descKey)}</p>
 
                         {/* Corner accent */}
                         <div className={`absolute bottom-0 ${i % 2 === 0 ? "right-0" : "left-0"} w-4 h-4 border-b-2 ${i % 2 === 0 ? "border-r-2" : "border-l-2"} border-brand-red/20 group-hover:border-brand-red group-hover:w-8 group-hover:h-8 transition-all duration-500`} />

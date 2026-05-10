@@ -1,50 +1,52 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight, Calculator, FileText, BarChart3, ShieldCheck, ClipboardCheck, Receipt } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useTranslations } from "next-intl";
 
 const services = [
   {
-    title: "Accounting & Bookkeeping",
-    desc: "Complete financial record maintenance focused on accuracy, compliance, and real-time visibility into your business health.",
+    titleKey: "accounting_title",
+    descKey: "accounting_desc",
     icon: Calculator,
     href: "/services/accounting-bookkeeping"
   },
   {
-    title: "Taxation Advisory & Filing",
-    desc: "Strategic tax planning and meticulous filing across Corporate Tax, VAT, and international tax frameworks.",
+    titleKey: "taxation_title",
+    descKey: "taxation_desc",
     icon: FileText,
     href: "/services/taxation-advisory"
   },
   {
-    title: "Audit",
-    desc: "End-to-end support for internal and external audits, ensuring your records meet every regulatory standard.",
+    titleKey: "audit_title",
+    descKey: "audit_desc",
     icon: ShieldCheck,
     href: "/services/audit-management"
   },
   {
-    title: "Financial Statement Preparation",
-    desc: "IFRS-compliant financial reporting that provides clarity for stakeholders and total accountability for management.",
+    titleKey: "financial_title",
+    descKey: "financial_desc",
     icon: BarChart3,
     href: "/services/financial-statements"
   },
   {
-    title: "Compliance & Advisory",
-    desc: "Ongoing monitoring and advisory on corporate laws, regulatory changes, and institutional compliance standards.",
+    titleKey: "compliance_title",
+    descKey: "compliance_desc",
     icon: ClipboardCheck,
     href: "/services/compliance-advisory"
   },
   {
-    title: "E-Invoicing & Reporting",
-    desc: "Implementation and management of digital reporting systems to ensure seamless, compliant transaction flows.",
+    titleKey: "einvoicing_title",
+    descKey: "einvoicing_desc",
     icon: Receipt,
     href: "/services/e-invoicing"
   }
 ];
 
 export default function ServicesPage() {
+  const t = useTranslations("ServicesPage");
   return (
     <main className="bg-brand-black min-h-screen">
       {/* Hero Section */}
@@ -56,13 +58,13 @@ export default function ServicesPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Our Expertise</span>
+            <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("hero.subtitle")}</span>
             <h1 className="text-3xl md:text-6xl font-black text-white leading-tight uppercase mb-8 tracking-tighter">
-              Beyond Bookkeeping. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">End-to-End Excellence.</span>
+              {t("hero.title1")} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">{t("hero.title2")}</span>
             </h1>
             <p className="text-xl md:text-2xl text-brand-accent/60 max-w-3xl mx-auto leading-relaxed font-medium">
-              We provide a complete spectrum of financial services, designed for businesses that need accuracy, compliance, and clarity at every stage.
+              {t("hero.desc")}
             </p>
           </motion.div>
         </div>
@@ -73,22 +75,22 @@ export default function ServicesPage() {
         <div className="container-custom px-6 md:px-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
-              <ScrollReveal key={service.title} delay={i * 0.1}>
+              <ScrollReveal key={service.titleKey} delay={i * 0.1}>
                 <div className="group relative bg-brand-dark/30 border border-white/5 p-12 hover:border-brand-red/30 transition-all duration-700 h-full flex flex-col">
                   <div className="mb-10 text-brand-red transform group-hover:scale-110 transition-transform duration-500 origin-left">
                     <service.icon size={40} strokeWidth={1.5} />
                   </div>
                   <h3 className="text-2xl font-black text-white uppercase mb-6 tracking-tight leading-tight group-hover:text-brand-red transition-colors duration-500">
-                    {service.title}
+                    {t(`services.${service.titleKey}`)}
                   </h3>
                   <p className="text-brand-accent/40 text-base leading-relaxed font-medium mb-12 flex-grow">
-                    {service.desc}
+                    {t(`services.${service.descKey}`)}
                   </p>
                   <Link
                     href={service.href}
                     className="inline-flex items-center gap-3 text-[10px] font-black uppercase tracking-[0.3em] text-white hover:text-brand-red transition-colors"
                   >
-                    Service Protocol <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform" />
+                    {t("protocol_btn")} <ArrowRight size={14} className="rtl:rotate-180 group-hover:translate-x-2 rtl:group-hover:-translate-x-2 transition-transform" />
                   </Link>
 
                   {/* Hover Accent */}
@@ -106,11 +108,11 @@ export default function ServicesPage() {
         <div className="container-custom px-6 md:px-12 relative z-10 text-center">
           <ScrollReveal>
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase mb-10 leading-tight">
-              Selective by design. <br />
-              <span className="text-brand-red">Trusted by standard.</span>
+              {t("standards.title1")} <br />
+              <span className="text-brand-red">{t("standards.title2")}</span>
             </h2>
             <p className="text-brand-accent/50 text-lg md:text-xl max-w-2xl mx-auto font-medium leading-relaxed">
-              Every engagement is led by experienced practitioners and reviewed against the benchmarks that matter. No shortcuts. No exceptions.
+              {t("standards.desc")}
             </p>
           </ScrollReveal>
         </div>
@@ -120,11 +122,11 @@ export default function ServicesPage() {
       <section className="section-padding">
         <div className="container-custom px-6 md:px-12 text-center">
           <ScrollReveal>
-            <span className="text-brand-red font-black text-[10px] tracking-[0.5em] uppercase mb-8 block">Ready to Partner?</span>
-            <h2 className="text-4xl md:text-7xl font-black text-white uppercase mb-12">Let&apos;s Build Success.</h2>
+            <span className="text-brand-red font-black text-[10px] tracking-[0.5em] uppercase mb-8 block">{t("cta.subtitle")}</span>
+            <h2 className="text-4xl md:text-7xl font-black text-white uppercase mb-12">{t("cta.title")}</h2>
             <Link href="/contact" className="btn-primary !px-16 !py-6 inline-block">
               <span className="flex items-center gap-4">
-                Request a Proposal <ArrowRight size={20} />
+                {t("cta.btn")} <ArrowRight size={20} className="rtl:rotate-180" />
               </span>
             </Link>
           </ScrollReveal>

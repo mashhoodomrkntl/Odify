@@ -7,6 +7,678 @@
     "contact": "Contact",
     "consult": "Consult Now",
     "switch_en": "English",
-    "switch_ar": "Arabic"
+    "switch_ar": "Arabic",
+    "services_dropdown": {
+      "accounting": "Accounting & Bookkeeping",
+      "taxation": "Taxation Advisory",
+      "audit": "Audit Management",
+      "compliance": "Compliance Advisory",
+      "financial": "Financial Statements",
+      "einvoicing": "E-Invoicing"
+    }
+  },
+  "Hero": {
+    "subtitle": "Odify Corporate Advisory",
+    "title1": "NOT JUST NUMBERS.",
+    "title2": "WE BUILD CONFIDENCE.",
+    "feature1": "Compliance",
+    "feature2": "Clarity",
+    "feature3": "Control",
+    "tagline": "Your Edge to Lead.",
+    "explore": "Explore Our Services",
+    "contact": "Get in Touch"
+  },
+  "Footer": {
+    "tagline": "Your Edge to Lead.",
+    "desc": "A corporate advisory firm built on standards, driven by performance, and trusted by design. Selective by choice. Professional by standard.",
+    "nav_title": "Navigation",
+    "nav_about": "About",
+    "nav_services": "Services",
+    "nav_approach": "Approach",
+    "nav_industries": "Industries",
+    "nav_contact": "Contact",
+    "exp_title": "Expertise",
+    "exp_accounting": "Accounting",
+    "exp_taxation": "Taxation",
+    "exp_audit": "Audit",
+    "exp_compliance": "Compliance",
+    "exp_advisory": "Advisory",
+    "connect_title": "Connect",
+    "linkedin": "LinkedIn Presence",
+    "instagram": "Instagram",
+    "copyright": "© {year} Odify. All rights reserved. Precision by standard.",
+    "privacy": "Privacy Protocol",
+    "terms": "Terms of Engagement"
+  },
+  "About": {
+    "subtitle": "The Odify Philosophy",
+    "title1": "Built on Standards.",
+    "title2": "Driven by Performance.",
+    "desc1": "Odify is a corporate advisory firm specialising in accounting, taxation, audit, and compliance. We work with businesses that take financial discipline seriously — and expect their partners to do the same.",
+    "desc2": "Our practice is built on three principles: international standards, operational precision, and consistent delivery. Every engagement is led by experienced practitioners and reviewed against the benchmarks that matter.",
+    "quote1": "We don't promise more than we can deliver.",
+    "quote2": "We deliver more than most promise."
+  },
+  "Services": {
+    "subtitle": "Core Expertise",
+    "title1": "Beyond Bookkeeping.",
+    "title2": "End-to-End Financial Operations.",
+    "desc": "We provide a complete spectrum of financial services, designed for businesses that need accuracy, compliance, and clarity at every stage.",
+    "srv1_title": "Accounting & Bookkeeping",
+    "srv1_desc": "Day-to-day financial recording, reconciliation, and management reporting — done right, the first time.",
+    "srv2_title": "Taxation Advisory & Filing",
+    "srv2_desc": "VAT and Corporate Tax advisory, registration, and filing support. Aligned with current regulations, every quarter, every cycle.",
+    "srv3_title": "Audit Management",
+    "srv3_desc": "End-to-end audit support including working papers, financial statements, and full-cycle audit management under IFRS standards.",
+    "srv4_title": "Financial Statement Preparation",
+    "srv4_desc": "Clean, compliant, and audit-ready statements that reflect the true position of your business.",
+    "srv5_title": "Compliance & Advisory",
+    "srv5_desc": "Regulatory compliance support, internal control reviews, and ongoing advisory for businesses that want to stay ahead.",
+    "srv6_title": "E-Invoicing & Reporting",
+    "srv6_desc": "Modern compliance solutions aligned with international e-invoicing standards.",
+    "explore": "Explore Details"
+  },
+  "WhyOdify": {
+    "subtitle": "The Core Difference",
+    "title1": "ONE STANDARD.",
+    "title2": "NO EXCEPTIONS.",
+    "desc": "Precision isn't a goal. It's our baseline. We operate with a level of discipline that sets the benchmark in corporate advisory.",
+    "badge": "Built for Excellence",
+    "val1_title": "Global Standards. Local Precision.",
+    "val1_desc": "We deliver to international benchmarks on every engagement — without compromising on the local detail that matters.",
+    "val2_title": "Practitioner-Led, Always.",
+    "val2_desc": "Every file is handled by qualified professionals with real-world experience. No outsourcing of judgement.",
+    "val3_title": "Selective by Design.",
+    "val3_desc": "We work with a curated portfolio of clients who value precision. This is how we maintain the quality of every engagement.",
+    "val4_title": "Consistent Delivery.",
+    "val4_desc": "Every file reviewed. Every report verified. Every client served with the same standard — regardless of size or scope.",
+    "val5_title": "Trusted by Standard.",
+    "val5_desc": "Our reputation is built on the discipline of doing things properly. Every time."
+  },
+  "Approach": {
+    "subtitle": "The Odify Methodology",
+    "title1": "Trust the Process.",
+    "title2": "Trust Odify.",
+    "phase": "Phase",
+    "step1_title": "Understand",
+    "step1_desc": "We begin by understanding your business, your obligations, and your expectations. No assumptions.",
+    "step2_title": "Structure",
+    "step2_desc": "We build a tailored engagement plan covering scope, timelines, deliverables, and review checkpoints.",
+    "step3_title": "Execute",
+    "step3_desc": "Our team delivers with discipline — every file documented, every step reviewed, every standard upheld.",
+    "step4_title": "Report",
+    "step4_desc": "You receive clear, audit-ready outputs and ongoing communication. No surprises. No delays.",
+    "step5_title": "Improve",
+    "step5_desc": "We don't just deliver — we identify opportunities to strengthen your financial operations going forward."
+  },
+  "Industries": {
+    "subtitle": "Strategic Sectors",
+    "title": "Sectors We Understand.",
+    "desc": "Odify works across a diverse range of industries. Whatever the sector, the standard remains the same.",
+    "ind1": "Trading & Distribution",
+    "ind2": "Professional Services",
+    "ind3": "Real Estate & Construction",
+    "ind4": "Hospitality & F&B",
+    "ind5": "Technology & E-Commerce",
+    "ind6": "Manufacturing",
+    "ind7": "Holding & Investment",
+    "beyond": "And Beyond"
+  },
+  "Expertise": {
+    "subtitle": "The School of Practice",
+    "title1": "Where Standards",
+    "title2": "Become",
+    "title3": "Second Nature.",
+    "desc1": "Our team is built around practitioners — not theorists. Every engagement is led by professionals with hands-on experience in real-world accounting, audit, and compliance work.",
+    "desc2": "We invest continuously in our team's expertise across IFRS, VAT, Corporate Tax, and international audit standards. The result: a team that knows the standards because they apply them every day.",
+    "quote1": "Practice is",
+    "quote2": "the proof."
+  },
+  "ClientCommitment": {
+    "subtitle": "Exclusivity by Design",
+    "title1": "NOT FOR",
+    "title2": "EVERYONE.",
+    "desc1": "We work with businesses that take compliance seriously — and expect their partners to do the same.",
+    "desc2": "If you're looking for a firm that treats financial discipline as a checkbox, we're not the right fit. If you're looking for a partner that treats every file like it matters, we should talk.",
+    "slogan1": "Selective by design.",
+    "slogan2": "Trusted by standard.",
+    "button": "Get in Touch"
+  },
+  "Stats": {
+    "stat1": "Engagements Delivered",
+    "stat2": "Years of Experience",
+    "stat3": "Industries Served",
+    "stat4": "Standards Upheld"
+  },
+  "Contact": {
+    "subtitle": "Connect with Odify",
+    "title1": "Ready to Work",
+    "title2": "With Odify?",
+    "desc": "Whether you need full-cycle audit support, tax advisory, or end-to-end accounting management — we're built to deliver.",
+    "email_label": "Email Us",
+    "call_label": "Call Us",
+    "visit_label": "Visit Us",
+    "visit_value": "Odify Corporate Office, Keralam, India",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_service": "Service Required",
+    "form_message": "Message",
+    "placeholder_name": "Your Name",
+    "placeholder_message": "Describe your requirements...",
+    "opt1": "Accounting & Bookkeeping",
+    "opt2": "Taxation Advisory",
+    "opt3": "Audit",
+    "opt4": "Compliance & Advisory",
+    "submit": "Schedule a Consultation"
+  },
+  "AboutPage": {
+    "principles": {
+      "p1_title": "Standards Are Non-Negotiable",
+      "p1_desc": "International benchmarks exist for a reason. We meet them on every engagement — without exception, without excuses.",
+      "p2_title": "Practice Beats Theory",
+      "p2_desc": "Every file is led by experienced practitioners. We hire people who know the standards because they apply them every day, not because they read about them.",
+      "p3_title": "Quality Is Not a Variable",
+      "p3_desc": "A small client gets the same scrutiny as a large one. The standard is the standard.",
+      "p4_title": "Selective by Design",
+      "p4_desc": "We choose our clients as carefully as our clients choose us. This is how we protect the quality of every engagement.",
+      "p5_title": "Consistency Is the Real Promise",
+      "p5_desc": "Excellence isn't a one-off. It's what we deliver, every file, every cycle, every time."
+    },
+    "hero": {
+      "subtitle": "Built for Performance",
+      "title1": "Built on Standards.",
+      "title2": "Driven by Performance.",
+      "desc": "A corporate advisory firm built for businesses that take finance seriously.",
+      "stat1": "IFRS",
+      "stat1_sub": "Global Standard",
+      "stat2": "100%",
+      "stat2_sub": "Precision Rate",
+      "stat3": "GCC",
+      "stat3_sub": "UAE, KSA, Oman"
+    },
+    "story": {
+      "subtitle": "Our Story",
+      "title": "Why Odify Exists.",
+      "p1": "Most businesses don't fail because they lack ambition. They fail because their numbers don't tell the truth, their compliance lags behind, or their financial operations can't keep up with their growth.",
+      "quote": "Odify was built to fix that.",
+      "p2": "We are a corporate advisory firm specialising in accounting, taxation, audit, and compliance — designed for businesses that need precision, accountability, and consistency at every stage of their financial operations.",
+      "p3": "We don't sell shortcuts. We don't promise miracles. We deliver the discipline that good businesses are built on.",
+      "badge_value": "0%",
+      "badge_text": "Compromise on Standards"
+    },
+    "beliefs": {
+      "subtitle": "What We Believe",
+      "title": "Our Principles."
+    },
+    "approach": {
+      "subtitle": "Our Approach",
+      "title": "Trust the Process.",
+      "p1": "We don't believe in mystery. The way we work is straightforward, structured, and transparent — by design.",
+      "p2": "Every engagement begins with understanding. We learn your business, your obligations, and your expectations before we recommend anything. From there, we build a tailored plan: clear scope, defined timelines, agreed deliverables, and structured review checkpoints.",
+      "step1_num": "01.",
+      "step1_title": "Understand",
+      "step1_desc": "We learn your business, your obligations, and your expectations before we recommend anything.",
+      "step2_num": "02.",
+      "step2_title": "Structure",
+      "step2_desc": "We build a tailored plan: clear scope, defined timelines, and agreed deliverables.",
+      "step3_num": "03.",
+      "step3_title": "Execute",
+      "step3_desc": "We deliver quietly, precisely, and on time. You receive clean outputs and total confidence.",
+      "p3": "Then we execute — quietly, precisely, and on time. You receive clean outputs, regular communication, and the confidence that your numbers are in disciplined hands.",
+      "p4": "That's it. No theatre. No noise. Just standards, applied consistently."
+    },
+    "team": {
+      "subtitle": "Our Team",
+      "title": "The People Behind the Practice.",
+      "p1": "Odify is built around a team of qualified professionals with deep, hands-on expertise across IFRS, VAT, Corporate Tax, audit, and compliance. Our practitioners come from diverse backgrounds in accounting, audit, and advisory — but share a common discipline: getting the work right.",
+      "p2": "We invest continuously in our team's technical knowledge, professional development, and exposure to international standards. Because the people who handle your numbers should be as serious about the craft as you are about your business.",
+      "m1_name": "Jalib Juman",
+      "m1_role": "Management",
+      "m2_name": "James John",
+      "m2_role": "Advisory"
+    },
+    "clients": {
+      "subtitle": "Who We Work With",
+      "title": "Not For Everyone.",
+      "desc": "We are intentionally selective about the clients we partner with. We work with businesses that:",
+      "li1": "Treat compliance as a foundation, not a formality",
+      "li2": "Value clarity, accountability, and timely delivery",
+      "li3": "Want a partner who pushes for quality, not just billable hours",
+      "li4": "Operate with ambition and need a finance function to match",
+      "slogan": "Selective by design. Trusted by standard."
+    },
+    "promise": {
+      "subtitle": "What You Can Expect",
+      "title": "Every file reviewed. Every report verified. Every client served with consistency.",
+      "tagline": "That's not a tagline. That's our operating standard."
+    },
+    "cta": {
+      "title": "Let's Build Something Disciplined.",
+      "btn1": "Schedule a Consultation",
+      "btn2": "Explore Services"
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "subtitle": "Contact Odify",
+      "title1": "Let's Build",
+      "title2": "Something Disciplined.",
+      "desc": "Ready to take your financial operations seriously? Reach out to our advisory team today."
+    },
+    "form": {
+      "title": "Schedule a Consultation",
+      "name_label": "Your Name",
+      "name_placeholder": "ENTER NAME",
+      "email_label": "Email Address",
+      "email_placeholder": "EMAIL@DOMAIN.COM",
+      "subject_label": "Subject of Inquiry",
+      "opt1": "ACCOUNTING & BOOKKEEPING",
+      "opt2": "TAXATION ADVISORY",
+      "opt3": "AUDIT",
+      "opt4": "COMPLIANCE CONSULTANCY",
+      "opt5": "OTHER INQUIRY",
+      "message_label": "Your Message",
+      "message_placeholder": "DESCRIBE YOUR REQUIREMENTS...",
+      "submit": "SUBMIT REQUEST"
+    },
+    "info": {
+      "email_label": "Email Presence",
+      "phone_label": "Direct Line",
+      "office_label": "Corporate Office",
+      "office_value1": "Odify Corporate Office,",
+      "office_value2": "Keralam, India"
+    },
+    "standard": {
+      "subtitle": "Our Operating Standard",
+      "title": "Selective by choice. Trusted by design.",
+      "desc": "We work with businesses that treat financial discipline as a foundation for growth. If you value precision, we are your partner."
+    }
+  },
+  "ServicesPage": {
+    "hero": {
+      "subtitle": "Our Expertise",
+      "title1": "Beyond Bookkeeping.",
+      "title2": "End-to-End Excellence.",
+      "desc": "We provide a complete spectrum of financial services, designed for businesses that need accuracy, compliance, and clarity at every stage."
+    },
+    "services": {
+      "accounting_title": "Accounting & Bookkeeping",
+      "accounting_desc": "Complete financial record maintenance focused on accuracy, compliance, and real-time visibility into your business health.",
+      "taxation_title": "Taxation Advisory & Filing",
+      "taxation_desc": "Strategic tax planning and meticulous filing across Corporate Tax, VAT, and international tax frameworks.",
+      "audit_title": "Audit",
+      "audit_desc": "End-to-end support for internal and external audits, ensuring your records meet every regulatory standard.",
+      "financial_title": "Financial Statement Preparation",
+      "financial_desc": "IFRS-compliant financial reporting that provides clarity for stakeholders and total accountability for management.",
+      "compliance_title": "Compliance & Advisory",
+      "compliance_desc": "Ongoing monitoring and advisory on corporate laws, regulatory changes, and institutional compliance standards.",
+      "einvoicing_title": "E-Invoicing & Reporting",
+      "einvoicing_desc": "Implementation and management of digital reporting systems to ensure seamless, compliant transaction flows."
+    },
+    "protocol_btn": "Service Protocol",
+    "standards": {
+      "title1": "Selective by design.",
+      "title2": "Trusted by standard.",
+      "desc": "Every engagement is led by experienced practitioners and reviewed against the benchmarks that matter. No shortcuts. No exceptions."
+    },
+    "cta": {
+      "subtitle": "Ready to Partner?",
+      "title": "Let's Build Success.",
+      "btn": "Request a Proposal"
+    }
+  },
+  "Accounting": {
+    "hero": {
+      "subtitle": "Accounting & Bookkeeping",
+      "title1": "Accounting",
+      "title2": "That Holds Up.",
+      "desc_p1": "Clean books. Clear numbers.",
+      "desc_highlight": "Consistent reporting",
+      "desc_p2": ". We maintain the discipline that makes every financial decision possible.",
+      "stat1_title": "Daily",
+      "stat1_sub": "Reconciliation",
+      "stat2_title": "Real-Time",
+      "stat2_sub": "Visibility",
+      "tag1": "Accounting Discipline // Alpha Unit",
+      "tag2": "Ledger Integrity: Verified",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Foundation of",
+      "title2": "Financial Discipline.",
+      "desc": "We manage the day-to-day financial recording, reconciliation, and reporting that keeps your business running cleanly. From transaction entry to month-end close, we maintain the discipline that makes every other financial decision possible.",
+      "feat1_title": "Meticulous Recording",
+      "feat1_desc": "Systematic entry and categorization of every business transaction, ensuring zero data leakage.",
+      "feat2_title": "Ledger Reconciliation",
+      "feat2_desc": "Rigorous cross-verification of bank, vendor, and internal accounts to ensure books reflect reality.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "Platform Agnostic.",
+      "title2": "Process Driven.",
+      "feat1_title": "Tech Integrated",
+      "feat1_desc": "We work on QuickBooks, Zoho Books, Tally, and other leading platforms — adapting to your existing systems.",
+      "feat2_title": "Structured Workflows",
+      "feat2_desc": "Every engagement includes clear documentation and rigorous, repeatable review cycles.",
+      "feat3_title": "Regular Reporting",
+      "feat3_desc": "Daily, weekly, or monthly updates that keep you informed without the noise."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "The Deliverables.",
+      "li1": "Accurate, audit-ready books maintained on a daily, weekly, or monthly basis",
+      "li2": "Bank, vendor, and intercompany reconciliations",
+      "li3": "Management reports that actually inform decisions",
+      "li4": "Year-end accounts, ready for audit or filing",
+      "li5": "A single point of contact who knows your business"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Because clean books aren't just compliance. They're the foundation of every confident decision a business makes."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Accounting Built",
+      "title2": "For Ambition.",
+      "btn1": "Talk to Our Accounting Team",
+      "btn2": "All Services"
+    }
+  },
+  "Taxation": {
+    "hero": {
+      "subtitle": "Taxation Advisory & Filing",
+      "title1": "VAT. Corporate Tax.",
+      "title2": "Done Right.",
+      "desc_p1": "Filed on time.",
+      "desc_highlight": "Aligned with current regulations",
+      "desc_p2": ". Every cycle.",
+      "stat1_title": "0%",
+      "stat1_sub": "Penalty Rate",
+      "stat2_title": "SYNC",
+      "stat2_sub": "Regulatory Database",
+      "tag1": "Tax Advisory // Sigma Unit",
+      "tag2": "Compliance Engine: Nominal",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Strategic",
+      "title2": "Tax Compliance.",
+      "desc": "We handle the full taxation lifecycle — from registration and structuring to advisory, filing, and ongoing compliance. Whether it's VAT returns, Corporate Tax filings, or strategic tax planning, our team makes sure your business stays current and compliant.",
+      "feat1_title": "Technical Filings",
+      "feat1_desc": "Quarterly VAT and annual Corporate Tax submissions managed with precision and zero penalty risk.",
+      "feat2_title": "Regulatory Advisory",
+      "feat2_desc": "Strategic planning for transactions, structuring, and cross-border matters in a shifting landscape.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "Qualified Precision.",
+      "title2": "Regulatory Focus.",
+      "feat1_title": "Always Current",
+      "feat1_desc": "We monitor regulatory updates continuously and build filing calendars tailored to your specific obligations.",
+      "feat2_title": "Professional Review",
+      "feat2_desc": "Every return is prepared, reviewed, and filed by qualified tax professionals — never automated, never rushed.",
+      "feat3_title": "Tailored Calendars",
+      "feat3_desc": "We manage your tax lifecycle proactively, ensuring zero penalties and 100% compliance."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "Deliverables.",
+      "li1": "VAT registration, deregistration, and amendment support",
+      "li2": "Quarterly VAT return preparation and filing",
+      "li3": "Corporate Tax registration and annual filing",
+      "li4": "Tax advisory for transactions, structuring, and cross-border matters",
+      "li5": "Representation and support during audits and assessments"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Compliance isn't optional. It's our discipline."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Tax Strategy",
+      "title2": "Without the Stress.",
+      "btn1": "Speak to a Tax Advisor",
+      "btn2": "All Services"
+    }
+  },
+  "Audit": {
+    "hero": {
+      "subtitle": "Audit",
+      "title1": "Audit.",
+      "title2": "Zero Friction.",
+      "desc_p1": "End-to-end audit support under",
+      "desc_highlight": "IFRS standards",
+      "desc_p2": ".",
+      "stat1_title": "IFRS",
+      "stat1_sub": "Protocol Alignment",
+      "stat2_title": "100%",
+      "stat2_sub": "Traceability",
+      "tag1": "Audit Protocol // Gamma Unit",
+      "tag2": "Working Papers: Secured",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Full Cycle",
+      "title2": "Audit Support.",
+      "desc": "We manage the full audit cycle — from preparation of working papers to coordination with external auditors. Our team prepares the documentation, structures the evidence, and supports the entire process so your audit runs smoothly and concludes cleanly.",
+      "feat1_title": "Audit Readiness",
+      "feat1_desc": "Structuring evidence and detailed working papers designed to withstand rigorous external scrutiny.",
+      "feat2_title": "Audit Coordination",
+      "feat2_desc": "Active management of external auditor requests, ensuring efficient cycles and clear communication.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "IFRS Standards.",
+      "title2": "Rigorous Methods.",
+      "feat1_title": "IFRS Alignment",
+      "feat1_desc": "We follow international audit methodology and IFRS standards on every engagement without exception.",
+      "feat2_title": "Traceability",
+      "feat2_desc": "Our working papers are structured for clarity and ease of review — built to withstand external scrutiny.",
+      "feat3_title": "Liaison Support",
+      "feat3_desc": "We act as the primary point of contact for your auditors, managing all requests and clarifications."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "Deliverables.",
+      "li1": "Comprehensive audit working papers",
+      "li2": "Financial statements prepared under IFRS",
+      "li3": "Schedules, reconciliations, and supporting evidence",
+      "li4": "Direct coordination with your appointed auditors",
+      "li5": "Post-audit advisory on observations and recommendations"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Because the standard behind the statement matters more than the statement itself."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Clean Audits.",
+      "title2": "Every Single Time.",
+      "btn1": "Get Audit-Ready",
+      "btn2": "All Services"
+    }
+  },
+  "Compliance": {
+    "hero": {
+      "subtitle": "Compliance Advisory",
+      "title1": "Governance.",
+      "title2": "Without Complexity.",
+      "desc_p1": "Regulatory support,",
+      "desc_highlight": "internal controls",
+      "desc_p2": ", and ongoing advisory.",
+      "stat1_title": "IFRS",
+      "stat1_sub": "Global Framework",
+      "stat2_title": "100%",
+      "stat2_sub": "Governance Scaling",
+      "tag1": "Compliance Advisory // Epsilon Unit",
+      "tag2": "Regulatory Sync: Optimal",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Built-In",
+      "title2": "Compliance Assurance.",
+      "desc": "We help businesses build and maintain compliance frameworks that hold up under scrutiny. From regulatory filings to internal control reviews, we identify gaps before they become problems and structure solutions that scale with your business.",
+      "feat1_title": "Gap Analysis",
+      "feat1_desc": "Identifying regulatory and operational gaps before they become liabilities, ensuring preemptive compliance.",
+      "feat2_title": "Internal Controls",
+      "feat2_desc": "Designing and reviewing internal governance protocols to strengthen financial integrity and reporting accuracy.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "Embedded.",
+      "title2": "Independent.",
+      "feat1_title": "Embedded Extension",
+      "feat1_desc": "We work as an extension of your finance function — embedded enough to understand your operations.",
+      "feat2_title": "Critical Challenge",
+      "feat2_desc": "Independent enough to challenge your operations when needed to protect the integrity of your business.",
+      "feat3_title": "Scalable Solutions",
+      "feat3_desc": "We structure solutions that grow with your business, ensuring compliance never lags behind ambition."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "Deliverables.",
+      "li1": "Regulatory compliance reviews and filings",
+      "li2": "Internal control assessments and recommendations",
+      "li3": "Policy and procedure documentation",
+      "li4": "Ongoing advisory on governance, risk, and reporting",
+      "li5": "Custom compliance dashboards and reporting"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Because good compliance isn't reactive. It's built in."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Governance",
+      "title2": "Without Complexity.",
+      "btn1": "Strengthen Your Compliance",
+      "btn2": "All Services"
+    }
+  },
+  "FinancialStatements": {
+    "hero": {
+      "subtitle": "Financial Statements Preparation",
+      "title1": "Reporting That",
+      "title2": "Inspires Trust.",
+      "desc_p1": "Clean. Compliant.",
+      "desc_highlight": "Audit-ready",
+      "desc_p2": ".",
+      "stat1_title": "IFRS",
+      "stat1_sub": "Global Framework",
+      "stat2_title": "100%",
+      "stat2_sub": "Ground-Up Build",
+      "tag1": "Financial Reporting // Delta Unit",
+      "tag2": "Transparency Level: Maximum",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Precise",
+      "title2": "Financial Reporting.",
+      "desc": "We prepare financial statements that reflect the true financial position of your business — built under IFRS, structured for audit, and presented for clarity.",
+      "feat1_title": "IFRS Framework",
+      "feat1_desc": "Full alignment with international reporting standards, ensuring global compatibility and trust.",
+      "feat2_title": "Audit Readiness",
+      "feat2_desc": "Statements designed and documented to withstand rigorous professional scrutiny from the start.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "Custom Ground Up.",
+      "title2": "Zero Templates.",
+      "feat1_title": "Ground Up",
+      "feat1_desc": "Each set of statements is built from the ground up with full documentation and supporting schedules.",
+      "feat2_title": "Full Disclosure",
+      "feat2_desc": "Comprehensive notes and disclosures aligned to applicable international standards.",
+      "feat3_title": "No Shortcuts",
+      "feat3_desc": "No copy-paste templates. We ensure every statement reflects your unique business reality."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "The Report Pack.",
+      "li1": "Statement of Financial Position",
+      "li2": "Statement of Profit or Loss",
+      "li3": "Statement of Cash Flows",
+      "li4": "Statement of Changes in Equity",
+      "li5": "Notes and disclosures aligned to IFRS"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Because numbers should tell the truth — and the right standard makes sure they do."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Reporting That",
+      "title2": "Inspires Trust.",
+      "btn1": "Request Financial Statement Preparation",
+      "btn2": "All Services"
+    }
+  },
+  "EInvoicing": {
+    "hero": {
+      "subtitle": "E - Invoicing",
+      "title1": "E-Invoicing.",
+      "title2": "Simplified.",
+      "desc_p1": "E-invoicing solutions aligned to",
+      "desc_highlight": "international standards",
+      "desc_p2": ".",
+      "stat1_title": "24/7",
+      "stat1_sub": "Active Monitoring",
+      "stat2_title": "100%",
+      "stat2_sub": "Digital Compliance",
+      "tag1": "E-Invoicing // Zeta Unit",
+      "tag2": "Digital Ledger: Active",
+      "tag3": "Est. 2024 // Advisory Protocol Alpha"
+    },
+    "scope": {
+      "subtitle": "The Scope of Work",
+      "title1": "Modern",
+      "title2": "Digital Transition.",
+      "desc": "We help businesses transition to and operate under e-invoicing frameworks — managing the technology, compliance, and reporting requirements end-to-end.",
+      "feat1_title": "Tech Management",
+      "feat1_desc": "Full ownership of e-invoicing technology integration and configuration across your digital stack.",
+      "feat2_title": "Digital Compliance",
+      "feat2_desc": "Ensuring every digital invoice meets the exact technical and regulatory specifications of your jurisdiction.",
+      "tag": "Protocol Reference"
+    },
+    "deliver": {
+      "subtitle": "How We Deliver",
+      "title1": "End-to-End.",
+      "title2": "Jurisdiction Focused.",
+      "feat1_title": "Config & Integration",
+      "feat1_desc": "Our team configures, integrates, and monitors your e-invoicing systems for seamless operation.",
+      "feat2_title": "Technical Specs",
+      "feat2_desc": "Making sure every invoice meets the technical and regulatory specifications of the relevant jurisdiction.",
+      "feat3_title": "Ongoing Monitoring",
+      "feat3_desc": "Continuous exception handling and compliance reporting to keep your digital flow uninterrupted."
+    },
+    "receive": {
+      "subtitle": "What You Receive",
+      "title": "Deliverables.",
+      "li1": "E-invoicing system selection and integration",
+      "li2": "Configuration aligned to regulatory requirements",
+      "li3": "Ongoing monitoring and exception handling",
+      "li4": "Compliance reporting and reconciliation",
+      "li5": "Training for your internal team"
+    },
+    "why": {
+      "subtitle": "Why Odify",
+      "title": "Because compliance keeps moving forward. So do we."
+    },
+    "cta": {
+      "subtitle": "Ready to start?",
+      "title1": "Digital Compliance.",
+      "title2": "Simplified.",
+      "btn1": "Talk to Our E-Invoicing Team",
+      "btn2": "All Services"
+    }
   }
 }

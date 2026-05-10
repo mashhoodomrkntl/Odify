@@ -16,6 +16,15 @@ const navLinks = [
   { key: "contact", href: "/contact" },
 ];
 
+const services = [
+  { nameKey: "accounting", href: "/services/accounting-bookkeeping" },
+  { nameKey: "taxation", href: "/services/taxation-advisory" },
+  { nameKey: "audit", href: "/services/audit-management" },
+  { nameKey: "compliance", href: "/services/compliance-advisory" },
+  { nameKey: "financial", href: "/services/financial-statements" },
+  { nameKey: "einvoicing", href: "/services/e-invoicing" },
+];
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -77,7 +86,7 @@ export default function Navbar() {
             {navLinks.map((link) =>
               link.hasDropdown ? (
                 <div
-                  key={link.name}
+                  key={link.key}
                   className="relative group"
                   onMouseEnter={() => setServicesOpen(true)}
                   onMouseLeave={() => setServicesOpen(false)}
@@ -86,7 +95,7 @@ export default function Navbar() {
                     href={link.href}
                     className={`flex items-center gap-1 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive(link.href) ? "text-brand-red" : "text-white/80 hover:text-brand-red"}`}
                   >
-                    {link.name}
+                    {t(link.key)}
                     <ChevronDown size={14} className={`transition-transform duration-300 ${servicesOpen ? "rotate-180 text-brand-red" : ""}`} />
                   </Link>
                   {isActive(link.href) && (
@@ -104,12 +113,12 @@ export default function Navbar() {
                         <div className="p-2">
                           {services.map((service) => (
                             <Link
-                              key={service.name}
+                              key={service.nameKey}
                               href={service.href}
                               className="block px-4 py-3 text-[11px] uppercase tracking-wider text-white/70 hover:bg-brand-red/10 hover:text-brand-red transition-all font-bold"
                               onClick={() => setServicesOpen(false)}
                             >
-                              {service.name}
+                              {t(`services_dropdown.${service.nameKey}`)}
                             </Link>
                           ))}
                         </div>
@@ -118,7 +127,7 @@ export default function Navbar() {
                   </AnimatePresence>
                 </div>
               ) : (
-                <div key={link.name} className="relative group">
+                <div key={link.key} className="relative group">
                   <Link
                     href={link.href}
                     className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive(link.href) ? "text-brand-red" : "text-white/80 hover:text-brand-red"}`}
@@ -140,7 +149,7 @@ export default function Navbar() {
               aria-label="Toggle language"
             >
               <Globe size={14} className="text-brand-red/80" />
-              <span className="w-6 text-center">{locale === 'en' ? t('switch_ar') : t('switch_en')}</span>
+              <span className="min-w-[60px] text-center">{locale === 'en' ? t('switch_ar') : t('switch_en')}</span>
             </button>
             <Link
               href="/contact"
@@ -173,7 +182,7 @@ export default function Navbar() {
             <div className="flex flex-col justify-center items-center h-full gap-6 px-8">
               {navLinks.map((link, i) =>
                 link.hasDropdown ? (
-                  <div key={link.name} className="text-center">
+                  <div key={link.key} className="text-center">
                     <motion.button
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -181,7 +190,7 @@ export default function Navbar() {
                       onClick={() => setServicesOpen(!servicesOpen)}
                       className={`text-2xl font-bold flex items-center gap-2 uppercase tracking-widest ${isActive(link.href) ? "text-brand-red" : "text-white"}`}
                     >
-                      Services <ChevronDown size={20} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
+                      {t(link.key)} <ChevronDown size={20} className={`transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
                     </motion.button>
                     <AnimatePresence>
                       {servicesOpen && (
@@ -193,12 +202,12 @@ export default function Navbar() {
                         >
                           {services.map((s) => (
                             <Link
-                              key={s.name}
+                              key={s.nameKey}
                               href={s.href}
                               className="block text-sm text-white/60 hover:text-brand-red transition-colors uppercase tracking-wider"
                               onClick={() => setMobileOpen(false)}
                             >
-                              {s.name}
+                              {t(`services_dropdown.${s.nameKey}`)}
                             </Link>
                           ))}
                         </motion.div>
@@ -207,7 +216,7 @@ export default function Navbar() {
                   </div>
                 ) : (
                   <motion.div
-                    key={link.name}
+                    key={link.key}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: i * 0.08 }}

@@ -2,39 +2,41 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowRight, CheckCircle2, Shield, Target, Users, Zap } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
+import { useTranslations } from "next-intl";
 
 const principles = [
   {
-    title: "Standards Are Non-Negotiable",
-    desc: "International benchmarks exist for a reason. We meet them on every engagement — without exception, without excuses.",
+    titleKey: "p1_title",
+    descKey: "p1_desc",
     icon: Shield
   },
   {
-    title: "Practice Beats Theory",
-    desc: "Every file is led by experienced practitioners. We hire people who know the standards because they apply them every day, not because they read about them.",
+    titleKey: "p2_title",
+    descKey: "p2_desc",
     icon: Target
   },
   {
-    title: "Quality Is Not a Variable",
-    desc: "A small client gets the same scrutiny as a large one. The standard is the standard.",
+    titleKey: "p3_title",
+    descKey: "p3_desc",
     icon: CheckCircle2
   },
   {
-    title: "Selective by Design",
-    desc: "We choose our clients as carefully as our clients choose us. This is how we protect the quality of every engagement.",
+    titleKey: "p4_title",
+    descKey: "p4_desc",
     icon: Users
   },
   {
-    title: "Consistency Is the Real Promise",
-    desc: "Excellence isn't a one-off. It's what we deliver, every file, every cycle, every time.",
+    titleKey: "p5_title",
+    descKey: "p5_desc",
     icon: Zap
   }
 ];
 
 export default function AboutPage() {
+  const t = useTranslations("AboutPage");
   return (
     <main className="bg-brand-black min-h-screen">
       {/* Hero Section */}
@@ -68,32 +70,32 @@ export default function AboutPage() {
           >
             <div className="flex items-center gap-4 mb-8">
               <div className="w-10 h-[1px] bg-brand-red" />
-              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase">Built for Performance</span>
+              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase">{t("hero.subtitle")}</span>
             </div>
 
             <h1 className="text-4xl md:text-7xl font-black text-white leading-[1.1] uppercase mb-8 tracking-tighter">
-              Built on Standards. <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">Driven by Performance.</span>
+              {t("hero.title1")} <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">{t("hero.title2")}</span>
             </h1>
 
             <p className="text-lg md:text-xl text-brand-accent/50 max-w-2xl leading-relaxed font-medium mb-12">
-              A corporate advisory firm built for businesses that take finance seriously.
+              {t("hero.desc")}
             </p>
 
             <div className="flex items-center gap-6">
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white tracking-tighter">IFRS</span>
-                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">Global Standard</span>
+                <span className="text-2xl font-black text-white tracking-tighter">{t("hero.stat1")}</span>
+                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">{t("hero.stat1_sub")}</span>
               </div>
               <div className="w-[1px] h-8 bg-white/10" />
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white tracking-tighter">100%</span>
-                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">Precision Rate</span>
+                <span dir="ltr" className="text-2xl font-black text-white tracking-tighter">{t("hero.stat2")}</span>
+                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">{t("hero.stat2_sub")}</span>
               </div>
               <div className="w-[1px] h-8 bg-white/10" />
               <div className="flex flex-col">
-                <span className="text-2xl font-black text-white tracking-tighter">GCC</span>
-                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">UAE, KSA, Oman</span>
+                <span className="text-2xl font-black text-white tracking-tighter">{t("hero.stat3")}</span>
+                <span className="text-[8px] text-brand-red font-bold uppercase tracking-widest mt-1">{t("hero.stat3_sub")}</span>
               </div>
             </div>
           </motion.div>
@@ -106,20 +108,20 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <ScrollReveal>
               <div>
-                <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Our Story</span>
-                <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">Why Odify Exists.</h2>
+                <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("story.subtitle")}</span>
+                <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">{t("story.title")}</h2>
                 <div className="space-y-6 text-brand-accent/70 text-lg leading-relaxed font-medium">
                   <p>
-                    Most businesses don't fail because they lack ambition. They fail because their numbers don't tell the truth, their compliance lags behind, or their financial operations can't keep up with their growth.
+                    {t("story.p1")}
                   </p>
-                  <p className="text-white border-l-2 border-brand-red pl-6 italic bg-white/[0.02] py-4">
-                    Odify was built to fix that.
-                  </p>
-                  <p>
-                    We are a corporate advisory firm specialising in accounting, taxation, audit, and compliance — designed for businesses that need precision, accountability, and consistency at every stage of their financial operations.
+                  <p className="text-white border-l-2 border-brand-red pl-6 italic bg-white/[0.02] py-4 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-6">
+                    {t("story.quote")}
                   </p>
                   <p>
-                    We don't sell shortcuts. We don't promise miracles. We deliver the discipline that good businesses are built on.
+                    {t("story.p2")}
+                  </p>
+                  <p>
+                    {t("story.p3")}
                   </p>
                 </div>
               </div>
@@ -130,8 +132,8 @@ export default function AboutPage() {
                 <div className="relative aspect-square bg-brand-dark border border-white/10 flex items-center justify-center overflow-hidden">
                   <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80')] bg-cover bg-center opacity-20 grayscale transition-transform duration-700 group-hover:scale-110" />
                   <div className="relative z-10 text-center p-12">
-                    <div className="text-6xl font-black text-brand-red mb-4">0%</div>
-                    <div className="text-white font-bold uppercase tracking-widest text-sm">Compromise on Standards</div>
+                    <div className="text-6xl font-black text-brand-red mb-4">{t("story.badge_value")}</div>
+                    <div className="text-white font-bold uppercase tracking-widest text-sm">{t("story.badge_text")}</div>
                   </div>
                 </div>
               </div>
@@ -145,8 +147,8 @@ export default function AboutPage() {
         <div className="container-custom">
           <ScrollReveal>
             <div className="mb-16 text-center">
-              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">What We Believe</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase">Our Principles.</h2>
+              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("beliefs.subtitle")}</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase">{t("beliefs.title")}</h2>
             </div>
           </ScrollReveal>
 
@@ -155,8 +157,8 @@ export default function AboutPage() {
               <ScrollReveal key={p.title} delay={i * 0.1}>
                 <div className="bg-brand-black border border-white/5 p-10 h-full group hover:border-brand-red/30 transition-all duration-500">
                   <p.icon className="text-brand-red mb-8" size={32} />
-                  <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">{p.title}</h3>
-                  <p className="text-brand-accent/50 leading-relaxed text-sm font-medium">{p.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">{t(`principles.${p.titleKey}`)}</h3>
+                  <p className="text-brand-accent/50 leading-relaxed text-sm font-medium">{t(`principles.${p.descKey}`)}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -169,36 +171,36 @@ export default function AboutPage() {
         <div className="container-custom relative z-10">
           <div className="max-w-4xl">
             <ScrollReveal>
-              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Our Approach</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">Trust the Process.</h2>
+              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("approach.subtitle")}</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">{t("approach.title")}</h2>
               <div className="space-y-8 text-brand-accent/70 text-lg leading-relaxed font-medium">
                 <p>
-                  We don't believe in mystery. The way we work is straightforward, structured, and transparent — by design.
+                  {t("approach.p1")}
                 </p>
                 <p>
-                  Every engagement begins with understanding. We learn your business, your obligations, and your expectations before we recommend anything. From there, we build a tailored plan: clear scope, defined timelines, agreed deliverables, and structured review checkpoints.
+                  {t("approach.p2")}
                 </p>
                 <div className="grid md:grid-cols-3 gap-8 pt-8 border-t border-white/5">
                   <div>
-                    <div className="text-brand-red font-black text-2xl mb-2">01.</div>
-                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">Understand</div>
-                    <p className="text-sm">We learn your business, your obligations, and your expectations before we recommend anything.</p>
+                    <div className="text-brand-red font-black text-2xl mb-2">{t("approach.step1_num")}</div>
+                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">{t("approach.step1_title")}</div>
+                    <p className="text-sm">{t("approach.step1_desc")}</p>
                   </div>
                   <div>
-                    <div className="text-brand-red font-black text-2xl mb-2">02.</div>
-                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">Structure</div>
-                    <p className="text-sm">We build a tailored plan: clear scope, defined timelines, and agreed deliverables.</p>
+                    <div className="text-brand-red font-black text-2xl mb-2">{t("approach.step2_num")}</div>
+                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">{t("approach.step2_title")}</div>
+                    <p className="text-sm">{t("approach.step2_desc")}</p>
                   </div>
                   <div>
-                    <div className="text-brand-red font-black text-2xl mb-2">03.</div>
-                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">Execute</div>
-                    <p className="text-sm">We deliver quietly, precisely, and on time. You receive clean outputs and total confidence.</p>
+                    <div className="text-brand-red font-black text-2xl mb-2">{t("approach.step3_num")}</div>
+                    <div className="text-white font-bold uppercase tracking-widest text-sm mb-4">{t("approach.step3_title")}</div>
+                    <p className="text-sm">{t("approach.step3_desc")}</p>
                   </div>
                 </div>
                 <p>
-                  Then we execute — quietly, precisely, and on time. You receive clean outputs, regular communication, and the confidence that your numbers are in disciplined hands.
+                  {t("approach.p3")}
                 </p>
-                <p className="pt-8 text-white/40">That's it. No theatre. No noise. Just standards, applied consistently.</p>
+                <p className="pt-8 text-white/40">{t("approach.p4")}</p>
               </div>
             </ScrollReveal>
           </div>
@@ -210,18 +212,18 @@ export default function AboutPage() {
         <div className="container-custom">
           <ScrollReveal>
             <div className="mb-16">
-              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Our Team</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase">The People Behind the Practice.</h2>
+              <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("team.subtitle")}</span>
+              <h2 className="text-4xl md:text-5xl font-black text-white uppercase">{t("team.title")}</h2>
             </div>
           </ScrollReveal>
 
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <ScrollReveal>
               <p className="text-brand-accent/70 text-lg leading-relaxed font-medium">
-                Odify is built around a team of qualified professionals with deep, hands-on expertise across IFRS, VAT, Corporate Tax, audit, and compliance. Our practitioners come from diverse backgrounds in accounting, audit, and advisory — but share a common discipline: getting the work right.
+                {t("team.p1")}
               </p>
               <p className="mt-6 text-brand-accent/70 text-lg leading-relaxed font-medium">
-                We invest continuously in our team's technical knowledge, professional development, and exposure to international standards. Because the people who handle your numbers should be as serious about the craft as you are about your business.
+                {t("team.p2")}
               </p>
             </ScrollReveal>
 
@@ -238,8 +240,8 @@ export default function AboutPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">Jalib Juman</h4>
-                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">Management</p>
+                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m1_name")}</h4>
+                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m1_role")}</p>
                 </div>
               </ScrollReveal>
               {/* Team Member 2 */}
@@ -254,8 +256,8 @@ export default function AboutPage() {
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">James John</h4>
-                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">Advisory</p>
+                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m2_name")}</h4>
+                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m2_role")}</p>
                 </div>
               </ScrollReveal>
             </div>
@@ -270,30 +272,30 @@ export default function AboutPage() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red opacity-[0.03] blur-[100px] pointer-events-none" />
             <ScrollReveal>
               <div className="max-w-3xl">
-                <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">Who We Work With</span>
-                <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">Not For Everyone.</h2>
+                <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("clients.subtitle")}</span>
+                <h2 className="text-4xl md:text-5xl font-black text-white uppercase mb-8">{t("clients.title")}</h2>
                 <p className="text-brand-accent/70 text-lg mb-10 leading-relaxed font-medium">
-                  We are intentionally selective about the clients we partner with. We work with businesses that:
+                  {t("clients.desc")}
                 </p>
                 <div className="grid sm:grid-cols-2 gap-6 text-sm text-white/80 mb-12">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 size={16} className="text-brand-red" />
-                    <span>Treat compliance as a foundation, not a formality</span>
+                    <span>{t("clients.li1")}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 size={16} className="text-brand-red" />
-                    <span>Value clarity, accountability, and timely delivery</span>
+                    <span>{t("clients.li2")}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 size={16} className="text-brand-red" />
-                    <span>Want a partner who pushes for quality, not just billable hours</span>
+                    <span>{t("clients.li3")}</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <CheckCircle2 size={16} className="text-brand-red" />
-                    <span>Operate with ambition and need a finance function to match</span>
+                    <span>{t("clients.li4")}</span>
                   </div>
                 </div>
-                <p className="text-brand-red font-black uppercase tracking-[0.3em] text-sm">Selective by design. Trusted by standard.</p>
+                <p className="text-brand-red font-black uppercase tracking-[0.3em] text-sm">{t("clients.slogan")}</p>
               </div>
             </ScrollReveal>
           </div>
@@ -304,11 +306,11 @@ export default function AboutPage() {
       <section className="py-24 bg-brand-red">
         <div className="container-custom text-center">
           <ScrollReveal>
-            <span className="text-white/60 font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">What You Can Expect</span>
+            <span className="text-white/60 font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("promise.subtitle")}</span>
             <h2 className="text-2xl md:text-4xl font-black text-white uppercase mb-6 tracking-tight px-6">
-              Every file reviewed. Every report verified. Every client served with consistency.
+              {t("promise.title")}
             </h2>
-            <p className="text-white/80 font-bold uppercase tracking-[0.5em] text-[9px]">That&apos;s not a tagline. That&apos;s our operating standard.</p>
+            <p className="text-white/80 font-bold uppercase tracking-[0.5em] text-[9px]">{t("promise.tagline")}</p>
           </ScrollReveal>
         </div>
       </section>
@@ -317,15 +319,15 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom text-center">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-12">Let&apos;s Build Something Disciplined.</h2>
+            <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-12">{t("cta.title")}</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link href="/contact" className="btn-primary !px-12 !py-5">
                 <span className="flex items-center gap-3">
-                  Schedule a Consultation <ArrowRight size={18} />
+                  {t("cta.btn1")} <ArrowRight size={18} className="rtl:rotate-180" />
                 </span>
               </Link>
               <Link href="/services" className="btn-secondary !px-12 !py-5">
-                Explore Services
+                {t("cta.btn2")}
               </Link>
             </div>
           </ScrollReveal>
