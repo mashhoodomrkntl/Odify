@@ -154,7 +154,7 @@ export default function AboutPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {principles.map((p, i) => (
-              <ScrollReveal key={p.title} delay={i * 0.1}>
+              <ScrollReveal key={p.titleKey} delay={i * 0.1}>
                 <div className="bg-brand-black border border-white/5 p-10 h-full group hover:border-brand-red/30 transition-all duration-500">
                   <p.icon className="text-brand-red mb-8" size={32} />
                   <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wider">{t(`principles.${p.titleKey}`)}</h3>
