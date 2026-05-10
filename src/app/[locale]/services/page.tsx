@@ -52,6 +52,18 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,4,41,0.05)_0%,transparent_50%)]" />
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '4rem 4rem',
+            maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)'
+          }}
+        />
         <div className="container-custom relative z-10 px-6 md:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -29,6 +29,8 @@ import { getMessages } from 'next-intl/server';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import { ThemeProvider } from "@/components/ThemeProvider";
+
 export default async function RootLayout({
   children,
   params,
@@ -40,12 +42,14 @@ export default async function RootLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${montserrat.variable} ${inter.variable} scroll-smooth`}>
-      <body className="antialiased bg-brand-black">
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${montserrat.variable} ${inter.variable} scroll-smooth`} suppressHydrationWarning>
+      <body className="antialiased bg-brand-black transition-colors duration-300">
         <NextIntlClientProvider messages={messages}>
-          <Navbar />
-          {children}
-          <Footer />
+          <ThemeProvider attribute="data-theme" defaultTheme="dark" enableSystem={false}>
+            <Navbar />
+            {children}
+            <Footer />
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

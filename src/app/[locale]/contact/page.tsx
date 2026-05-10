@@ -12,19 +12,31 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,4,41,0.05)_0%,transparent_50%)]" />
-        <div className="container-custom relative z-10 px-6 md:px-12">
+        <div 
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            backgroundImage: `
+              linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+              linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px)
+            `,
+            backgroundSize: '4rem 4rem',
+            maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)',
+            WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)'
+          }}
+        />
+        <div className="container-custom relative z-10 px-6 md:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="max-w-4xl"
+            className="max-w-4xl mx-auto"
           >
             <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("hero.subtitle")}</span>
             <h1 className="text-5xl md:text-7xl font-black text-white leading-tight uppercase mb-8 tracking-tighter">
               {t("hero.title1")} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-red to-brand-red/50">{t("hero.title2")}</span>
             </h1>
-            <p className="text-xl md:text-2xl text-brand-accent/60 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-brand-accent/60 leading-relaxed font-medium mx-auto">
               {t("hero.desc")}
             </p>
           </motion.div>
@@ -120,7 +132,7 @@ export default function ContactPage() {
               {/* Google Map View */}
               <ScrollReveal delay={0.4}>
                 <div className="relative group">
-                  <div className="absolute -inset-2 bg-brand-red/20 blur-xl " />
+                  <div className="absolute -inset-1 bg-brand-red/10 blur-xl " />
                   <div className="relative aspect-video bg-brand-dark border border-white/5  duration-700">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4634587602777!2d75.99996417504512!3d11.003812189159133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7b5006cffe6c7%3A0x67ad494f13a11d61!2sOdify!5e0!3m2!1sen!2sin!4v1778271358450!5m2!1sen!2sin"

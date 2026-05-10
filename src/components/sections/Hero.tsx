@@ -15,7 +15,18 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Texture/Grid Overlay */}
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=80')] bg-cover bg-center opacity-[0.03] grayscale" />
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(128, 128, 128, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(128, 128, 128, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '4rem 4rem',
+          maskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at 50% 50%, #000 40%, transparent 100%)'
+        }}
+      />
 
       {/* Animated Red Line */}
       <motion.div
@@ -100,8 +111,8 @@ export default function Hero() {
       </motion.div>
 
       {/* Decorative vertical lines */}
-      <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-white/5 hidden lg:block" />
-      <div className="absolute right-10 top-0 bottom-0 w-[1px] bg-white/5 hidden lg:block" />
+      <div className="absolute left-10 top-0 bottom-0 w-[1px] bg-brand-accent/20 hidden lg:block" />
+      <div className="absolute right-10 top-0 bottom-0 w-[1px] bg-brand-accent/20 hidden lg:block" />
     </section>
   );
 }

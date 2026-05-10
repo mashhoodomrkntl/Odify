@@ -78,7 +78,7 @@ export default function CompliancePage() {
       {/* What We Do */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-        
+
         <div className="container-custom">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-7">
@@ -87,12 +87,12 @@ export default function CompliancePage() {
                   <div className="w-8 h-[1px] bg-brand-red" />
                   <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase">{t("scope.subtitle")}</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-10 tracking-tighter leading-[0.9]">
                   {t("scope.title1")} <br />
                   <span className="text-brand-red">{t("scope.title2")}</span>
                 </h2>
-                
+
                 <p className="text-brand-accent/70 text-xl leading-relaxed font-medium mb-12 max-w-2xl border-l-2 border-brand-red/20 pl-8 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-8">
                   {t("scope.desc")}
                 </p>
@@ -119,7 +119,7 @@ export default function CompliancePage() {
                 <div className="relative aspect-[4/5] bg-brand-dark overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000 group">
                   <div className="absolute inset-0 border border-white/10 z-20 group-hover:border-brand-red/30 transition-colors" />
                   <Image
-                    src="https://images.unsplash.com/photo-1521791136364-798a7bc0d262?auto=format&fit=crop&q=80&w=800"
+                    src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&q=80&w=800"
                     alt="Compliance Framework"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-110 opacity-40 group-hover:opacity-100"

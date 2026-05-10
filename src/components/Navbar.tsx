@@ -6,6 +6,7 @@ import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
+import { ThemeToggle } from "@/components/ThemeToggle";
 import Image from "next/image";
 
 const navLinks = [
@@ -57,7 +58,7 @@ export default function Navbar() {
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
-    if (href.startsWith("/#")) return pathname === "/";
+    if (href.startsWith("/#")) return false; // Do not highlight in-page anchor links globally
     return pathname.startsWith(href);
   };
 
@@ -76,7 +77,7 @@ export default function Navbar() {
               alt="Odify Logo"
               width={120}
               height={48}
-              className="h-10 w-auto object-contain transition-all duration-300"
+              className="h-10 w-auto object-contain transition-all duration-300 invert-on-light"
               priority
             />
           </Link>
@@ -143,6 +144,7 @@ export default function Navbar() {
           </div>
 
           <div className="hidden lg:flex items-center gap-6">
+            <ThemeToggle />
             <button
               onClick={switchLanguage}
               className="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 text-white/80 hover:text-brand-red"
@@ -160,13 +162,16 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <button
-            onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden relative z-50 p-2 text-white"
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          <div className="lg:hidden flex items-center gap-4 relative z-50">
+            <ThemeToggle />
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-white"
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </nav>
       </header>
 

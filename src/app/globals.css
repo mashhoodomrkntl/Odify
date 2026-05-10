@@ -2,16 +2,16 @@
 
 @theme {
   --color-brand-red: #D90429;
-  --color-brand-black: #0B0C10;
-  --color-brand-dark: #1F2833;
-  --color-brand-accent: #C5C6C7;
+  --color-brand-black: var(--theme-brand-black);
+  --color-brand-dark: var(--theme-brand-dark);
+  --color-brand-accent: var(--theme-brand-accent);
   
-  --color-surface-50: #fcfcfc;
-  --color-surface-100: #f5f5f5;
-  --color-surface-200: #eeeeee;
-  --color-surface-800: #1F2833;
-  --color-surface-900: #0B0C10;
-  --color-surface-950: #050505;
+  --color-surface-50: var(--theme-surface-50);
+  --color-surface-100: var(--theme-surface-100);
+  --color-surface-200: var(--theme-surface-200);
+  --color-surface-800: var(--theme-surface-800);
+  --color-surface-900: var(--theme-surface-900);
+  --color-surface-950: var(--theme-surface-950);
 
   --font-display: var(--font-montserrat), sans-serif;
   --font-body: var(--font-inter), sans-serif;
@@ -25,14 +25,53 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-border: var(--border);
+  
+  --color-white: var(--theme-white); /* Making standard text-white react to theme */
 }
 
 :root {
+  /* Default dark theme */
   --background: #0B0C10;
   --foreground: #C5C6C7;
   --primary: #D90429;
   --primary-foreground: #ffffff;
   --border: #1F2833;
+  
+  --theme-brand-black: #0B0C10;
+  --theme-brand-dark: #1F2833;
+  --theme-brand-accent: #C5C6C7;
+  --theme-white: #ffffff; /* text-white evaluates to white */
+  
+  --theme-surface-50: #fcfcfc;
+  --theme-surface-100: #f5f5f5;
+  --theme-surface-200: #eeeeee;
+  --theme-surface-800: #1F2833;
+  --theme-surface-900: #0B0C10;
+  --theme-surface-950: #050505;
+}
+
+[data-theme='light'] {
+  --background: #ffffff;
+  --foreground: #495057;
+  --primary: #D90429;
+  --primary-foreground: #ffffff;
+  --border: #e9ecef;
+  
+  --theme-brand-black: #ffffff; /* brand-black backgrounds become white */
+  --theme-brand-dark: #f8f9fa; /* brand-dark cards become very light gray */
+  --theme-brand-accent: #495057; /* brand-accent text becomes dark gray */
+  --theme-white: #0B0C10; /* text-white becomes black text */
+  
+  --theme-surface-50: #050505;
+  --theme-surface-100: #1F2833;
+  --theme-surface-200: #C5C6C7;
+  --theme-surface-800: #f5f5f5;
+  --theme-surface-900: #ffffff;
+  --theme-surface-950: #ffffff;
+}
+
+[data-theme='light'] .invert-on-light {
+  filter: invert(1);
 }
 
 /* The site is dark by default */
