@@ -1,0 +1,12 @@
+{
+  "Navbar": {
+    "about": "About",
+    "services": "Services",
+    "approach": "Approach",
+    "industries": "Industries",
+    "contact": "Contact",
+    "consult": "Consult Now",
+    "switch_en": "English",
+    "switch_ar": "Arabic"
+  }
+}

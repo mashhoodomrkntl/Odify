@@ -1,34 +1,35 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/routing";
+import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Globe } from "lucide-react";
 
-const services = [
-  { name: "Accounting & Bookkeeping", href: "/services/accounting-bookkeeping" },
-  { name: "Taxation Advisory & Filing", href: "/services/taxation-advisory" },
-  { name: "Audit", href: "/services/audit-management" },
-  { name: "Financial Statement Preparation", href: "/services/financial-statements" },
-  { name: "Compliance & Advisory", href: "/services/compliance-advisory" },
-  { name: "E-Invoicing & Reporting", href: "/services/e-invoicing" },
-];
+import Image from "next/image";
 
 const navLinks = [
-  { name: "About", href: "/about" },
-  { name: "Services", href: "/services", hasDropdown: true },
-  { name: "Approach", href: "/#approach" },
-  { name: "Industries", href: "/#industries" },
-  { name: "Contact", href: "/contact" },
+  { key: "about", href: "/about" },
+  { key: "services", href: "/services", hasDropdown: true },
+  { key: "approach", href: "/#approach" },
+  { key: "industries", href: "/#industries" },
+  { key: "contact", href: "/contact" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  
   const pathname = usePathname();
+  const router = useRouter();
+  const locale = useLocale();
+  const t = useTranslations("Navbar");
+
+  const switchLanguage = () => {
+    const nextLocale = locale === 'en' ? 'ar' : 'en';
+    router.replace(pathname, { locale: nextLocale });
+  };
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -122,7 +123,7 @@ export default function Navbar() {
                     href={link.href}
                     className={`text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 ${isActive(link.href) ? "text-brand-red" : "text-white/80 hover:text-brand-red"}`}
                   >
-                    {link.name}
+                    {t(link.key)}
                   </Link>
                   {isActive(link.href) && (
                     <motion.div layoutId="nav-active" className="absolute -bottom-1 left-0 right-0 h-[2px] bg-brand-red" />
@@ -132,12 +133,20 @@ export default function Navbar() {
             )}
           </div>
 
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-6">
+            <button
+              onClick={switchLanguage}
+              className="flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-300 text-white/80 hover:text-brand-red"
+              aria-label="Toggle language"
+            >
+              <Globe size={14} className="text-brand-red/80" />
+              <span className="w-6 text-center">{locale === 'en' ? t('switch_ar') : t('switch_en')}</span>
+            </button>
             <Link
               href="/contact"
               className="btn-primary"
             >
-              Consult Now
+              {t('consult')}
             </Link>
           </div>
 
@@ -208,7 +217,7 @@ export default function Navbar() {
                       className={`text-2xl font-bold transition-colors uppercase tracking-widest ${isActive(link.href) ? "text-brand-red" : "text-white hover:text-brand-red"}`}
                       onClick={() => setMobileOpen(false)}
                     >
-                      {link.name}
+                      {t(link.key)}
                     </Link>
                   </motion.div>
                 )
@@ -217,10 +226,17 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mt-6"
+                className="mt-6 flex flex-col items-center gap-6"
               >
+                <button
+                  onClick={switchLanguage}
+                  className="flex items-center gap-2 text-sm font-bold tracking-[0.2em] uppercase transition-colors text-white hover:text-brand-red"
+                >
+                  <Globe size={18} className="text-brand-red" />
+                  <span>{locale === 'en' ? t('switch_ar') : t('switch_en')}</span>
+                </button>
                 <Link href="/contact" className="btn-primary" onClick={() => setMobileOpen(false)}>
-                  Get in Touch
+                  {t('consult')}
                 </Link>
               </motion.div>
             </div>

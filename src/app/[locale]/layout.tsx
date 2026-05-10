@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
-import "./globals.css";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -24,21 +23,30 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
-
+import "../globals.css";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
+  const { locale } = await params;
+  const messages = await getMessages();
+
   return (
-    <html lang="en" className={`${montserrat.variable} ${inter.variable} scroll-smooth`}>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'} className={`${montserrat.variable} ${inter.variable} scroll-smooth`}>
       <body className="antialiased bg-brand-black">
-        <Navbar />
-        {children}
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          <Navbar />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
