@@ -30,7 +30,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  
+
   const pathname = usePathname();
   const router = useRouter();
   const locale = useLocale();
@@ -162,8 +162,15 @@ export default function Navbar() {
           </div>
 
           {/* Mobile Toggle */}
-          <div className="lg:hidden flex items-center gap-4 relative z-50">
+          <div className="lg:hidden flex items-center gap-3 relative z-50">
             <ThemeToggle />
+            <button
+              onClick={switchLanguage}
+              className="flex items-center justify-center w-9 h-9 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm text-white/80 hover:text-brand-red hover:border-brand-red/30 transition-all duration-300"
+              aria-label="Toggle language"
+            >
+              <Globe size={16} className="text-brand-red/80" />
+            </button>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               className="p-2 text-white"
@@ -242,13 +249,6 @@ export default function Navbar() {
                 transition={{ delay: 0.4 }}
                 className="mt-6 flex flex-col items-center gap-6"
               >
-                <button
-                  onClick={switchLanguage}
-                  className="flex items-center gap-2 text-sm font-bold tracking-[0.2em] uppercase transition-colors text-white hover:text-brand-red"
-                >
-                  <Globe size={18} className="text-brand-red" />
-                  <span>{locale === 'en' ? t('switch_ar') : t('switch_en')}</span>
-                </button>
                 <Link href="/contact" className="btn-primary" onClick={() => setMobileOpen(false)}>
                   {t('consult')}
                 </Link>
