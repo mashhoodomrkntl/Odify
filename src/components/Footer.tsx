@@ -61,7 +61,7 @@ const serviceLinks = [
 
 export default function Footer() {
   const t = useTranslations("Footer");
-  
+
   return (
     <footer className="bg-brand-black text-white relative border-t border-white/5" role="contentinfo">
       {/* Decorative background pulse */}
@@ -135,11 +135,11 @@ export default function Footer() {
             <ul className="space-y-6">
               <li>
                 <a
-                  href="mailto:hello@odify.com"
+                  href="mailto:hello@odifyindia.com"
                   className="flex items-center gap-4 text-sm text-brand-accent/40 hover:text-brand-red transition-colors group font-medium"
                 >
                   <Mail size={18} className="text-brand-red/60 group-hover:text-brand-red" />
-                  hello@odify.com
+                  hello@odifyindia.com
                 </a>
               </li>
               <li>

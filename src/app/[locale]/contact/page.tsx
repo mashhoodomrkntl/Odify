@@ -12,7 +12,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,4,41,0.05)_0%,transparent_50%)]" />
-        <div 
+        <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
             backgroundImage: `
@@ -109,8 +109,8 @@ export default function ContactPage() {
                 <div className="grid gap-12 sm:grid-cols-2">
                   <div className="space-y-4">
                     <span className="text-brand-red font-black text-[10px] tracking-[0.4em] uppercase">{t("info.email_label")}</span>
-                    <a href="mailto:hello@odify.com" className="block text-2xl font-bold text-white hover:text-brand-red transition-colors tracking-tight rtl:text-right text-left" dir="ltr">
-                      hello@odify.com
+                    <a href="mailto:hello@odifyindia.com" className="block text-2xl font-bold text-white hover:text-brand-red transition-colors tracking-tight rtl:text-right text-left" dir="ltr">
+                      hello@odifyindia.com
                     </a>
                   </div>
                   <div className="space-y-4">

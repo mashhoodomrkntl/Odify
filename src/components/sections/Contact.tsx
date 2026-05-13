@@ -28,7 +28,7 @@ export default function Contact() {
 
             <div className="space-y-12">
               {[
-                { icon: <Mail size={24} />, labelKey: "email_label", value: "hello@odify.com", href: "mailto:hello@odify.com" },
+                { icon: <Mail size={24} />, labelKey: "email_label", value: "hello@odifyindia.com", href: "hello@odifyindia.com" },
                 { icon: <Phone size={24} />, labelKey: "call_label", value: "+91 90480 10605", href: "tel:+91 90480 10605" },
                 { icon: <MapPin size={24} />, labelKey: "visit_label", valueKey: "visit_value", href: "#" },
               ].map((item, idx) => (
