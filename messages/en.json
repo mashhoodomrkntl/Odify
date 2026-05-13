@@ -11,7 +11,7 @@
     "services_dropdown": {
       "accounting": "Accounting & Bookkeeping",
       "taxation": "Taxation Advisory",
-      "audit": "Audit Management",
+      "audit": "Audit",
       "compliance": "Compliance Advisory",
       "financial": "Financial Statements",
       "einvoicing": "E-Invoicing"
@@ -68,8 +68,8 @@
     "srv1_desc": "Day-to-day financial recording, reconciliation, and management reporting — done right, the first time.",
     "srv2_title": "Taxation Advisory & Filing",
     "srv2_desc": "VAT and Corporate Tax advisory, registration, and filing support. Aligned with current regulations, every quarter, every cycle.",
-    "srv3_title": "Audit Management",
-    "srv3_desc": "End-to-end audit support including working papers, financial statements, and full-cycle audit management under IFRS standards.",
+    "srv3_title": "Audit ",
+    "srv3_desc": "End-to-end audit support including working papers, financial statements, and full-cycle audit  under IFRS standards.",
     "srv4_title": "Financial Statement Preparation",
     "srv4_desc": "Clean, compliant, and audit-ready statements that reflect the true position of your business.",
     "srv5_title": "Compliance & Advisory",
