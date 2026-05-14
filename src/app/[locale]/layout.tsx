@@ -49,6 +49,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       shortcut: "/Odify White.jpeg",
       apple: "/Odify White.jpeg",
     },
+    verification: {
+      google: "y8B4gk8hT3_WY1PJa0CaGDCpBMOV827K9Jdkzk482bw",
+    },
   };
 }
 
