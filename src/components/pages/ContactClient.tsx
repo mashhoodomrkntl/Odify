@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -7,6 +8,29 @@ import { useTranslations } from "next-intl";
 
 export default function ContactClient() {
   const t = useTranslations("ContactPage");
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "82a6c098-0442-4db7-9b36-4a908aedb9ce");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.currentTarget.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <main className="bg-brand-black min-h-screen">
       {/* Hero Section */}
@@ -54,12 +78,14 @@ export default function ContactClient() {
 
                 <h2 className="text-3xl font-black text-white uppercase mb-12 tracking-tight">{t("form.title")}</h2>
 
-                <form className="space-y-10" onSubmit={(e) => e.preventDefault()}>
+                <form className="space-y-10" onSubmit={onSubmit}>
                   <div className="grid md:grid-cols-2 gap-10">
                     <div className="space-y-4">
                       <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form.name_label")}</label>
                       <input
+                        name="name"
                         type="text"
+                        required
                         className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm tracking-widest font-bold placeholder:text-white/20"
                         placeholder={t("form.name_placeholder")}
                       />
@@ -67,7 +93,9 @@ export default function ContactClient() {
                     <div className="space-y-4">
                       <label className="text-[10px] font-black tracking-widest text-brand-accent/30">{t("form.email_label")}</label>
                       <input
+                        name="email"
                         type="email"
+                        required
                         className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold placeholder:text-white/20"
                         placeholder={t("form.email_placeholder")}
                       />
@@ -76,29 +104,36 @@ export default function ContactClient() {
 
                   <div className="space-y-4">
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form.subject_label")}</label>
-                    <select className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold appearance-none">
-                      <option>{t("form.opt1")}</option>
-                      <option>{t("form.opt2")}</option>
-                      <option>{t("form.opt3")}</option>
-                      <option>{t("form.opt4")}</option>
-                      <option>{t("form.opt5")}</option>
+                    <select name="subject" className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm uppercase tracking-widest font-bold appearance-none">
+                      <option value={t("form.opt1")}>{t("form.opt1")}</option>
+                      <option value={t("form.opt2")}>{t("form.opt2")}</option>
+                      <option value={t("form.opt3")}>{t("form.opt3")}</option>
+                      <option value={t("form.opt4")}>{t("form.opt4")}</option>
+                      <option value={t("form.opt5")}>{t("form.opt5")}</option>
                     </select>
                   </div>
 
                   <div className="space-y-4">
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form.message_label")}</label>
                     <textarea
+                      name="message"
+                      required
                       rows={4}
                       className="w-full bg-brand-black/40 border border-white/5 border-b-white/10 px-4 py-4 text-white focus:border-brand-red transition-all outline-hidden text-sm tracking-widest font-bold resize-none placeholder:text-white/20"
                       placeholder={t("form.message_placeholder")}
                     ></textarea>
                   </div>
 
-                  <button className="btn-primary w-full group !py-6">
+                  <button type="submit" className="btn-primary w-full group !py-6">
                     <span className="flex items-center justify-center gap-4">
                       {t("form.submit")} <Send size={18} className="rtl:rotate-180 group-hover:translate-x-1 group-hover:-translate-y-1 rtl:group-hover:-translate-x-1 transition-transform" />
                     </span>
                   </button>
+                  {result && (
+                    <div className="text-brand-red font-bold text-center text-sm mt-4">
+                      {result}
+                    </div>
+                  )}
                 </form>
               </div>
             </ScrollReveal>

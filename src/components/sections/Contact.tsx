@@ -1,11 +1,35 @@
 "use client";
 
+import { useState } from "react";
 import ScrollReveal from "@/components/ScrollReveal";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const t = useTranslations("Contact");
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.currentTarget);
+    formData.append("access_key", "82a6c098-0442-4db7-9b36-4a908aedb9ce");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.currentTarget.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <section id="contact" className="section-padding bg-brand-black relative">
       {/* Background patterns contained to prevent overflow */}
@@ -55,31 +79,31 @@ export default function Contact() {
               {/* Corner accent */}
               <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-brand-red opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
-              <form className="space-y-8" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-8" onSubmit={onSubmit}>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="space-y-3">
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form_name")}</label>
-                    <input type="text" className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder={t("placeholder_name")} />
+                    <input name="name" required type="text" className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder={t("placeholder_name")} />
                   </div>
                   <div className="space-y-3">
                     <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form_email")}</label>
-                    <input type="email" className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder="email@domain.com" />
+                    <input name="email" required type="email" className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder="email@domain.com" />
                   </div>
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form_service")}</label>
-                  <select className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm bg-brand-black uppercase tracking-widest font-bold">
-                    <option>{t("opt1")}</option>
-                    <option>{t("opt2")}</option>
-                    <option>{t("opt3")}</option>
-                    <option>{t("opt4")}</option>
+                  <select name="service" className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm bg-brand-black uppercase tracking-widest font-bold">
+                    <option value={t("opt1")}>{t("opt1")}</option>
+                    <option value={t("opt2")}>{t("opt2")}</option>
+                    <option value={t("opt3")}>{t("opt3")}</option>
+                    <option value={t("opt4")}>{t("opt4")}</option>
                   </select>
                 </div>
 
                 <div className="space-y-3">
                   <label className="text-[10px] font-black uppercase tracking-widest text-brand-accent/30">{t("form_message")}</label>
-                  <textarea rows={4} className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm resize-none placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder={t("placeholder_message")}></textarea>
+                  <textarea name="message" required rows={4} className="w-full bg-brand-black/50 border border-white/5 px-6 py-4 text-white focus:border-brand-red focus:ring-0 transition-all outline-hidden text-sm resize-none placeholder:text-white/10 uppercase tracking-widest font-bold" placeholder={t("placeholder_message")}></textarea>
                 </div>
 
                 <button type="submit" className="btn-primary w-full group">
@@ -87,6 +111,11 @@ export default function Contact() {
                     {t("submit")} <Send size={18} className="rtl:rotate-180 group-hover:translate-x-1 group-hover:-translate-y-1 rtl:group-hover:-translate-x-1 transition-transform" />
                   </span>
                 </button>
+                {result && (
+                  <div className="text-brand-red font-bold text-center text-sm mt-4">
+                    {result}
+                  </div>
+                )}
               </form>
             </div>
           </ScrollReveal>
