@@ -52,7 +52,7 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,4,41,0.05)_0%,transparent_50%)]" />
-        <div 
+        <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
             backgroundImage: `
@@ -88,14 +88,14 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
               <ScrollReveal key={service.titleKey} delay={i * 0.1}>
-                <div className="group relative bg-brand-dark/30 border border-white/5 p-12 hover:border-brand-red/30 transition-all duration-700 h-full flex flex-col">
-                  <div className="mb-10 text-brand-red transform group-hover:scale-110 transition-transform duration-500 origin-left">
+                <div className="group relative bg-brand-dark/30 border border-white/5 p-6 md:p-10 hover:border-brand-red/30 transition-all duration-700 h-full flex flex-col">
+                  {/* <div className="mb-10 text-brand-red transform group-hover:scale-110 transition-transform duration-500 origin-left">
                     <service.icon size={40} strokeWidth={1.5} />
-                  </div>
+                  </div> */}
                   <h3 className="text-2xl font-black text-white uppercase mb-6 tracking-tight leading-tight group-hover:text-brand-red transition-colors duration-500">
                     {t(`services.${service.titleKey}`)}
                   </h3>
-                  <p className="text-brand-accent/40 text-base leading-relaxed font-medium mb-12 flex-grow">
+                  <p className="text-brand-accent/40 text-base leading-relaxed font-medium mb-10 flex-grow">
                     {t(`services.${service.descKey}`)}
                   </p>
                   <Link
@@ -115,7 +115,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Standards Banner */}
-      <section className="py-32 bg-brand-dark/50 border-y border-white/5 relative overflow-hidden">
+      <section className="py-24 bg-brand-dark/50 border-y border-white/5 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-fixed bg-center opacity-[0.03] grayscale" />
         <div className="container-custom px-6 md:px-12 relative z-10 text-center">
           <ScrollReveal>

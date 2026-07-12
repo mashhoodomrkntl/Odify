@@ -268,7 +268,7 @@ export default function AboutClient() {
       {/* Who We Work With */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="bg-white/[0.02] border border-white/5 p-12 md:p-24 relative overflow-hidden">
+          <div className="bg-white/[0.02] border border-white/5 p-8 md:p-18 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-64 h-64 bg-brand-red opacity-[0.03] blur-[100px] pointer-events-none" />
             <ScrollReveal>
               <div className="max-w-3xl">

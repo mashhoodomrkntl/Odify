@@ -36,7 +36,7 @@ export default function Approach() {
 
       <div className="container-custom relative z-10 px-6 md:px-12">
         {/* Sticky Header Wrapper */}
-        <div className="sticky top-0 z-30 pt-24 pb-12 bg-brand-black/80 backdrop-blur-md">
+        <div className="sticky top-20 md:top-16 z-30 pt-2 md:pt-8 pb-6 md:pb-8 bg-brand-black/80 backdrop-blur-md">
           <ScrollReveal>
             <div className="text-center max-w-4xl mx-auto">
               <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("subtitle")}</span>
@@ -48,7 +48,7 @@ export default function Approach() {
           </ScrollReveal>
         </div>
 
-        <div className="relative mt-12 pb-32">
+        <div className="relative mt-6 md:mt-14 pb-32">
           {/* Static Background Line */}
           <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-white/5 -translate-x-1/2" />
 
@@ -58,11 +58,11 @@ export default function Approach() {
             className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-brand-red -translate-x-1/2 z-20 shadow-[0_0:15px_rgba(217,4,41,0.5)]"
           />
 
-          <div className="space-y-24 md:space-y-0">
+          <div className="space-y-12 md:space-y-0">
             {steps.map((step, i) => (
               <div key={step.num} className="relative">
                 <ScrollReveal delay={i * 0.1}>
-                  <div className={`md:flex items-center gap-12 md:mb-32 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
+                  <div className={`md:flex items-center gap-12 md:mb-16 ${i % 2 === 0 ? "" : "md:flex-row-reverse"}`}>
                     <div className={`flex-1 text-center ${i % 2 === 0 ? "md:text-right" : "md:text-left"}`}>
                       <div className={`group relative bg-brand-dark/40 backdrop-blur-sm border border-white/5 p-8 md:p-10 transition-all duration-500 hover:border-brand-red/30 mx-auto md:mx-0 ${i % 2 === 0 ? "md:ml-auto" : "md:mr-auto"} max-w-md text-left rtl:text-right`}>
                         <span className="text-brand-red font-black text-[10px] tracking-[0.3em] uppercase">{t("phase")} {step.num}</span>
@@ -75,7 +75,7 @@ export default function Approach() {
                     </div>
 
                     {/* Center Node */}
-                    <div className="hidden md:flex items-center justify-center w-12 h-12 relative z-30 shrink-0">
+                    <div className="hidden md:flex items-center justify-center w-12 h-12 relative z-20 shrink-0">
                       <div className="w-3 h-3 rounded-full bg-brand-black border border-white/20 group-hover:border-brand-red transition-colors duration-500 z-10" />
                       <div className="absolute inset-0 rounded-full bg-brand-red/10 animate-pulse hidden group-hover:block" />
                     </div>

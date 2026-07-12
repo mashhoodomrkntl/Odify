@@ -78,7 +78,7 @@ export default function AccountingClient() {
       {/* What We Do */}
       <section className="section-padding relative overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/5 to-transparent" />
-        
+
         <div className="container-custom">
           <div className="grid lg:grid-cols-12 gap-16 items-start">
             <div className="lg:col-span-7">
@@ -87,12 +87,12 @@ export default function AccountingClient() {
                   <div className="w-8 h-[1px] bg-brand-red" />
                   <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase">{t("scope.subtitle")}</span>
                 </div>
-                
+
                 <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-10 tracking-tighter leading-[0.9]">
                   {t("scope.title1")} <br />
                   <span className="text-brand-red">{t("scope.title2")}</span>
                 </h2>
-                
+
                 <p className="text-brand-accent/70 text-xl leading-relaxed font-medium mb-12 max-w-2xl border-l-2 border-brand-red/20 pl-8 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-8">
                   {t("scope.desc")}
                 </p>
@@ -208,7 +208,7 @@ export default function AccountingClient() {
       </section>
 
       {/* Why Odify */}
-      <section className="py-32 bg-brand-dark/50 border-y border-white/5 relative overflow-hidden">
+      <section className="py-10 md:py-22 bg-brand-dark/50 border-y border-white/5 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-red opacity-[0.05] blur-[120px] pointer-events-none" />
         <div className="container-custom relative z-10 text-center">
           <ScrollReveal>

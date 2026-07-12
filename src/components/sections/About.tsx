@@ -24,7 +24,7 @@ export default function About() {
                 {t("title1")} <br />
                 {t("title2")}
               </h2>
-              
+
               <div className="mt-12 h-[1px] w-24 bg-brand-red" />
             </div>
           </ScrollReveal>

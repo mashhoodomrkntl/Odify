@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Texture/Grid Overlay */}
-      <div 
+      <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
           backgroundImage: `
@@ -74,7 +74,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-base md:text-xl text-brand-accent/60 max-w-2xl mx-auto leading-relaxed mb-12 md:mb-17 font-medium"
+          className="text-base md:text-xl text-brand-accent/60 max-w-2xl mx-auto leading-relaxed mb-12 md:mb-16 font-medium"
         >
           <span className="text-white">{t("tagline")}</span>
         </motion.p>
@@ -85,7 +85,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-5"
         >
-          <Link href="/#services" className="btn-primary group !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm">
+          <Link href="/services" className="btn-primary group !px-8 md:!px-10 !py-3 md:!py-4 text-xs md:text-sm">
             <span className="flex items-center gap-3">
               {t("explore")} <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform rtl:group-hover:-translate-x-1 rtl:rotate-180" />
             </span>

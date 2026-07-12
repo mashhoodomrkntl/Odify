@@ -52,7 +52,7 @@ export default function ServicesClient() {
       {/* Hero Section */}
       <section className="relative pt-40 pb-24 overflow-hidden border-b border-white/5">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(217,4,41,0.05)_0%,transparent_50%)]" />
-        <div 
+        <div
           className="absolute inset-0 z-0 pointer-events-none"
           style={{
             backgroundImage: `

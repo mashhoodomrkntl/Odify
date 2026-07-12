@@ -69,7 +69,7 @@ export default function ContactClient() {
 
       {/* Main Contact Section */}
       <section className="section-padding">
-        <div className="container-custom px-6 md:px-0">
+        <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-24">
             {/* Left: Contact Form */}
             <ScrollReveal>

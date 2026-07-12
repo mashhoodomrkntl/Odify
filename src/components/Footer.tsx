@@ -68,7 +68,7 @@ export default function Footer() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-red/50 to-transparent" />
 
       {/* Main Footer */}
-      <div className="container-custom px-6 md:px-12 pt-24 pb-16">
+      <div className="container-custom px-6 md:px-12 py-16">
         <div className="grid gap-16 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-1">
@@ -77,7 +77,7 @@ export default function Footer() {
               alt="Odify"
               width={140}
               height={56}
-              className="h-26 w-auto object-contain mb-8"
+              className="h-26 w-auto object-contain -mt-6"
             />
             <p className="text-[10px] text-brand-red font-black uppercase tracking-[0.4em] mb-4">
               {t('tagline')}
@@ -190,18 +190,18 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="bg-brand-dark/50 border-t border-white/5">
-        <div className="container-custom px-6 md:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="container-custom px-6 md:px-12 py-4 flex flex-col md:flex-row items-center justify-center gap-6">
           <p className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em]">
             {t('copyright', { year: new Date().getFullYear() })}
           </p>
-          <div className="flex items-center gap-8">
+          {/* <div className="flex items-center gap-8">
             <Link href="/privacy" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
               {t('privacy')}
             </Link>
             <Link href="/terms" className="text-[10px] font-bold text-brand-accent/20 uppercase tracking-[0.2em] hover:text-brand-red transition-colors">
               {t('terms')}
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>

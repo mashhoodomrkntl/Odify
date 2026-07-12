@@ -10,6 +10,7 @@ import { ThemeToggle } from "@/components/ThemeToggle";
 import Image from "next/image";
 
 const navLinks = [
+  { key: "home", href: "/" },
   { key: "about", href: "/about" },
   { key: "services", href: "/services", hasDropdown: true },
   { key: "approach", href: "/#approach" },

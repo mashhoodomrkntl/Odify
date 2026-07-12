@@ -15,7 +15,7 @@ export default function Stats() {
   const t = useTranslations("Stats");
 
   return (
-    <section className="py-32 bg-brand-black text-white relative border-y border-white/5">
+    <section className="py-16 bg-brand-black text-white relative border-y border-white/5">
       <div className="container-custom px-6 md:px-12">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {stats.map((stat, i) => (
