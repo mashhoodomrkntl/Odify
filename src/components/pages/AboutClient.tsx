@@ -210,58 +210,56 @@ export default function AboutClient() {
       {/* Team */}
       <section className="section-padding bg-brand-dark/30">
         <div className="container-custom">
-          <ScrollReveal>
-            <div className="mb-16">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <ScrollReveal className="lg:col-span-5">
               <span className="text-brand-red font-bold text-[10px] tracking-[0.5em] uppercase mb-6 block">{t("team.subtitle")}</span>
-              <h2 className="text-4xl md:text-5xl font-black text-white uppercase">{t("team.title")}</h2>
-            </div>
-          </ScrollReveal>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white uppercase leading-[1.05]">{t("team.title")}</h2>
+              <div className="w-16 h-[2px] bg-brand-red mt-8" />
+            </ScrollReveal>
 
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <ScrollReveal>
-              <p className="text-brand-accent/70 text-lg leading-relaxed font-medium">
+            <ScrollReveal delay={0.15} className="lg:col-span-7 space-y-8 pt-2 lg:pt-4">
+              <div className="text-xl md:text-2xl text-white font-bold leading-relaxed border-l-2 border-brand-red pl-6 md:pl-8 py-3 bg-brand-black/40 rtl:border-l-0 rtl:border-r-2 rtl:pl-0 rtl:pr-6 md:rtl:pr-8">
                 {t("team.p1")}
-              </p>
-              <p className="mt-6 text-brand-accent/70 text-lg leading-relaxed font-medium">
+              </div>
+              <p className="text-brand-accent/80 text-base md:text-lg leading-relaxed font-medium">
                 {t("team.p2")}
               </p>
             </ScrollReveal>
-
-            <div className="grid sm:grid-cols-2 gap-6">
-              {/* Team Member 1 */}
-              <ScrollReveal delay={0.2}>
-                <div className="bg-brand-black border border-white/5 p-8 group hover:border-brand-red/30 transition-all duration-500">
-                  <div className="aspect-square bg-brand-dark mb-6 relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-                    <div className="absolute inset-0 bg-brand-red/10 z-10" />
-                    <Image
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
-                      alt="Jalib Juman"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m1_name")}</h4>
-                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m1_role")}</p>
-                </div>
-              </ScrollReveal>
-              {/* Team Member 2 */}
-              <ScrollReveal delay={0.3}>
-                <div className="bg-brand-black border border-white/5 p-8 group hover:border-brand-red/30 transition-all duration-500">
-                  <div className="aspect-square bg-brand-dark mb-6 relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-                    <div className="absolute inset-0 bg-brand-red/10 z-10" />
-                    <Image
-                      src="https://images.unsplash.com/photo-1678483456295-6f8e206f5bf5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                      alt="James John"
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  </div>
-                  <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m2_name")}</h4>
-                  <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m2_role")}</p>
-                </div>
-              </ScrollReveal>
-            </div>
           </div>
+
+          {/* Team Members Grid (commented out) */}
+          {/* <div className="grid sm:grid-cols-2 gap-6 mt-16">
+            <ScrollReveal delay={0.2}>
+              <div className="bg-brand-black border border-white/5 p-8 group hover:border-brand-red/30 transition-all duration-500">
+                <div className="aspect-square bg-brand-dark mb-6 relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <div className="absolute inset-0 bg-brand-red/10 z-10" />
+                  <Image
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+                    alt="Jalib Juman"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m1_name")}</h4>
+                <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m1_role")}</p>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal delay={0.3}>
+              <div className="bg-brand-black border border-white/5 p-8 group hover:border-brand-red/30 transition-all duration-500">
+                <div className="aspect-square bg-brand-dark mb-6 relative overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+                  <div className="absolute inset-0 bg-brand-red/10 z-10" />
+                  <Image
+                    src="https://images.unsplash.com/photo-1678483456295-6f8e206f5bf5?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="James John"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                </div>
+                <h4 className="text-white font-bold uppercase tracking-widest mb-1">{t("team.m2_name")}</h4>
+                <p className="text-brand-red text-[10px] font-black uppercase tracking-[0.3em]">{t("team.m2_role")}</p>
+              </div>
+            </ScrollReveal>
+          </div> */}
         </div>
       </section>
 
