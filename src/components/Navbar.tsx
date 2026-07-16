@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 import { Link, usePathname, useRouter } from "@/i18n/routing";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -28,6 +29,15 @@ const services = [
 ];
 
 export default function Navbar() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isLight = mounted && resolvedTheme === "light";
+  const logoSrc = isLight ? "/Odify White.png" : "/Odify logo-01.png";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -73,14 +83,28 @@ export default function Navbar() {
       >
         <nav className="container-custom flex items-center justify-between px-6 md:px-12 h-20" aria-label="Main navigation">
           <Link href="/" className="relative z-10 flex items-center gap-1" aria-label="Odify Home">
-            <Image
-              src="/Odify logo-01.png"
-              alt="Odify Logo"
-              width={120}
-              height={48}
-              className="h-10 w-auto object-contain transition-all duration-300 invert-on-light"
-              priority
-            />
+            {isLight ? (
+              <div className="h-10 overflow-hidden flex items-center justify-center" style={{ width: 120 }}>
+                <Image
+                  src="/Odify red.png"
+                  alt="Odify Logo"
+                  width={120}
+                  height={48}
+                  className="h-13 w-auto object-contain"
+                  // style={{ height: "140%" }}
+                  priority
+                />
+              </div>
+            ) : (
+              <Image
+                src="/Odify logo-01.png"
+                alt="Odify Logo"
+                width={120}
+                height={48}
+                className="h-10 w-auto object-contain"
+                priority
+              />
+            )}
           </Link>
 
           {/* Desktop Nav */}
