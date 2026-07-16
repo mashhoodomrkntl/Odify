@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
 
   const titles = {
-    en: "Odify | Premier Auditing & Advisory in Kerala,Malappuram, UAE & China",
+    en: "Odify |  Auditing & Advisory in Kerala,Malappuram, UAE & China",
     ar: "أوديفاي | التدقيق والاستشارات المتميزة في كيرالا والإمارات والصين"
   };
 

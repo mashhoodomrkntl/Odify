@@ -159,7 +159,7 @@
     "email_label": "Email Us",
     "call_label": "Call Us",
     "visit_label": "Visit Us",
-    "visit_value": "Odify Corporate Office, Keralam, India",
+    "visit_value": "Odify Corporate Office, Business Bay (Dubai) and Kerala (India)",
     "form_name": "Full Name",
     "form_email": "Email Address",
     "form_service": "Service Required",
@@ -287,7 +287,7 @@
       "phone_label": "Direct Line",
       "office_label": "Corporate Office",
       "office_value1": "Odify Corporate Office,",
-      "office_value2": "Keralam, India"
+      "office_value2": "Business Bay (Dubai) and Keralam, India"
     },
     "standard": {
       "subtitle": "Our Operating Standard",

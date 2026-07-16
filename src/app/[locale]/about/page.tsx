@@ -3,9 +3,9 @@ import AboutClient from "@/components/pages/AboutClient";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  
+
   const titles = {
-    en: "About Odify | Premier Auditing & Advisory in Kerala",
+    en: "About Odify | Auditing & Advisory in Kerala",
     ar: "عن أوديفاي | التدقيق والاستشارات المتميزة في كيرالا"
   };
 
