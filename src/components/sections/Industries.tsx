@@ -36,7 +36,7 @@ export default function Industries() {
           {industries.map((ind, i) => (
             <ScrollReveal key={ind.key} delay={i * 0.08} className="h-full">
               <div className="group bg-brand-black p-10 text-center transition-all duration-500 hover:bg-brand-red/[0.02] h-full flex flex-col items-center justify-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 border border-brand-red/10 text-brand-red mb-6 group-hover:scale-110 group-hover:border-brand-red group-hover:bg-brand-red group-hover:text-white transition-all duration-500">
+                <div className="inline-flex items-center justify-center w-16 h-16 border border-brand-red/10 text-brand-red mb-6 group-hover:scale-110 group-hover:border-brand-red group-hover:bg-brand-red group-hover:text-[#ffffff] transition-all duration-500">
                   {ind.icon}
                 </div>
                 <p className="text-[11px] font-black text-white uppercase tracking-[0.2em] leading-relaxed group-hover:text-brand-red transition-colors">{t(ind.key)}</p>

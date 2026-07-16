@@ -57,7 +57,7 @@ export default function Contact() {
                 { icon: <MapPin size={24} />, labelKey: "visit_label", valueKey: "visit_value", href: "#" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-8 group">
-                  <div className="shrink-0 w-14 h-14 border border-white/5 flex items-center justify-center text-brand-red transition-all duration-500 group-hover:bg-brand-red group-hover:text-white">
+                  <div className="shrink-0 w-14 h-14 border border-white/5 flex items-center justify-center text-brand-red transition-all duration-500 group-hover:bg-brand-red group-hover:text-[#ffffff]">
                     {item.icon}
                   </div>
                   <div>
